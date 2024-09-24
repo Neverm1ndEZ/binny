@@ -1,31 +1,73 @@
+"use client";
+
 import Image from "next/image";
-import React from "react";
+import { Carousel } from "../../utils/util";
 
 export default function Hero() {
 	return (
-		<div className="max-w-[1000px] mt-[-96px] w-full min-h-screen mx-auto text-center flex flex-col justify-center">
-			<div className="flex flex-col justify-center items-center">
-				<h1 className="text-3xl lg:text-7xl font-bold mb-4 max-w-[350px] lg:max-w-full">
+		<div className="relative w-full h-screen">
+			<Carousel
+				className="w-full h-full"
+				navigation={({ setActiveIndex, activeIndex }) => (
+					<div className="absolute bottom-4 left-2/4 z-50 flex -translate-x-2/4 gap-2">
+						{[0, 1].map((i) => (
+							<span
+								key={i}
+								className={`block h-1 cursor-pointer rounded-2xl transition-all content-[''] ${
+									activeIndex === i ? "w-8 bg-white" : "w-4 bg-white/50"
+								}`}
+								onClick={() => setActiveIndex(i)}
+							/>
+						))}
+					</div>
+				)}
+				placeholder=""
+				onPointerEnterCapture={() => {}}
+				onPointerLeaveCapture={() => {}}
+			>
+				<div className="relative w-full h-full">
+					<Image
+						src="/banner5.png"
+						alt="Background"
+						fill
+						style={{ objectFit: "cover" }}
+						quality={100}
+						priority
+					/>
+					<div className="absolute inset-0 bg-black bg-opacity-50" />
+					<HeroContent />
+				</div>
+				<div className="relative w-full h-full">
+					<Image
+						src="/Banner 1.png"
+						alt="Background"
+						fill
+						style={{ objectFit: "cover" }}
+						quality={100}
+					/>
+					<div className="absolute inset-0 bg-black bg-opacity-50" />
+					<HeroContent />
+				</div>
+			</Carousel>
+		</div>
+	);
+}
+
+function HeroContent() {
+	return (
+		<div className="absolute inset-0 flex items-center justify-center">
+			<div className="max-w-[1000px] w-full text-center px-4">
+				<h1 className="text-3xl lg:text-7xl font-bold mb-4 text-white">
 					Lean energy for{" "}
-					<span className="text-white bg-gradient-to-r from-lime-700 to-blue-300 px-4 py-1">
+					<span className="bg-gradient-to-r from-lime-700 to-blue-300 px-4 py-1">
 						bright
 					</span>{" "}
 					tomorrow.
 				</h1>
-				<p className="text-sm lg:text-base font-light mb-4 lg:mb-8 max-w-[350px] lg:max-w-full">
+				<p className="text-sm lg:text-base font-light mb-8 text-white max-w-2xl mx-auto">
 					Join us in going solar: Save money, protect Earth, and power your
 					future sustainably.
 				</p>
-				<button className="flex items-center gap-3 rounded-full border border-black px-10 py-4 lg:px-14 lg:py-6 hover:bg-blue-600 hover:text-white hover:border-none transition duration-300 ease-in-out hover:scale-95 group">
-					<Image
-						src="/button-logo.svg"
-						alt="arrow"
-						width={50}
-						height={50}
-						className="group-hover:filter group-hover:brightness-0 group-hover:invert transition-all duration-300"
-					/>
-					<span className="mt-2">Go Solar Now!</span>
-				</button>
 			</div>
 		</div>
 	);
