@@ -7,6 +7,9 @@ export default function Hero() {
 	return (
 		<div className="relative w-full h-screen">
 			<Carousel
+				autoplay={true}
+				loop={true}
+				autoplayDelay={4000}
 				className="w-full h-full"
 				navigation={({ setActiveIndex, activeIndex }) => (
 					<div className="absolute bottom-4 left-2/4 z-50 flex -translate-x-2/4 gap-2">

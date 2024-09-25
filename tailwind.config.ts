@@ -1,5 +1,4 @@
 import withMT from "@material-tailwind/react/utils/withMT";
-import { nextui } from "@nextui-org/react";
 
 const config = withMT({
 	content: [
@@ -12,7 +11,6 @@ const config = withMT({
 		extend: {},
 	},
 	darkMode: "class",
-	plugins: [nextui()],
 });
 
 export default config;

@@ -1,5 +1,7 @@
+("");
 import Image from "next/image";
 import React from "react";
+import { Modal } from "../Modal";
 
 export default function Leadership() {
 	return (
@@ -29,6 +31,7 @@ export default function Leadership() {
 							We are committed to create a greener future. Our vision is to have
 							a portfolio of 50 GW of RE capacity by 2030.
 						</p>
+						<Modal buttonText={"Read More"} />
 					</div>
 				</div>
 				<div className="flex items-center gap-4">
@@ -50,6 +53,7 @@ export default function Leadership() {
 							We are committed to create a greener future. Our vision is to have
 							a portfolio of 50 GW of RE capacity by 2030.
 						</p>
+						<Modal buttonText={"Read More"} />
 					</div>
 				</div>
 			</div>

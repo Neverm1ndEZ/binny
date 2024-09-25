@@ -1,13 +1,13 @@
 "use client";
 import {
 	Card,
-	CardHeader,
 	CardBody,
 	CardFooter,
+	CardHeader,
 	Typography,
-	Button,
 } from "@material-tailwind/react";
 import Image from "next/image";
+import { Modal } from "../Modal";
 export function Sustainablilty() {
 	return (
 		<div className="mt-10 p-4 lg:p-0">
@@ -18,7 +18,7 @@ export function Sustainablilty() {
 			</div>
 			<div className="p-4 flex items-center justify-between gap-4">
 				<Card
-					className="pt-6 w-96 shadow-2xl"
+					className="pt-6 w-96 shadow-2xl hover:scale-105 transition duration-300 ease-in-out"
 					placeholder=""
 					onPointerEnterCapture={() => {}}
 					onPointerLeaveCapture={() => {}}
@@ -69,17 +69,11 @@ export function Sustainablilty() {
 						onPointerEnterCapture={() => {}}
 						onPointerLeaveCapture={() => {}}
 					>
-						<Button
-							placeholder=""
-							onPointerEnterCapture={() => {}}
-							onPointerLeaveCapture={() => {}}
-						>
-							Read More
-						</Button>
+						<Modal buttonText={"Read More"} />
 					</CardFooter>
 				</Card>
 				<Card
-					className="pt-6 w-96 shadow-2xl"
+					className="pt-6 w-96 shadow-2xl hover:scale-105 transition duration-300 ease-in-out"
 					placeholder=""
 					onPointerEnterCapture={() => {}}
 					onPointerLeaveCapture={() => {}}
@@ -130,17 +124,11 @@ export function Sustainablilty() {
 						onPointerEnterCapture={() => {}}
 						onPointerLeaveCapture={() => {}}
 					>
-						<Button
-							placeholder=""
-							onPointerEnterCapture={() => {}}
-							onPointerLeaveCapture={() => {}}
-						>
-							Read More
-						</Button>
+						<Modal buttonText={"Read More"} />
 					</CardFooter>
 				</Card>
 				<Card
-					className="pt-6 w-96 shadow-2xl"
+					className="pt-6 w-96 shadow-2xl hover:scale-105 transition duration-300 ease-in-out"
 					placeholder=""
 					onPointerEnterCapture={() => {}}
 					onPointerLeaveCapture={() => {}}
@@ -191,13 +179,7 @@ export function Sustainablilty() {
 						onPointerEnterCapture={() => {}}
 						onPointerLeaveCapture={() => {}}
 					>
-						<Button
-							placeholder=""
-							onPointerEnterCapture={() => {}}
-							onPointerLeaveCapture={() => {}}
-						>
-							Read More
-						</Button>
+						<Modal buttonText={"Read More"} />
 					</CardFooter>
 				</Card>
 			</div>
