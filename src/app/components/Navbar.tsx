@@ -21,6 +21,14 @@ export default function Navbar() {
 		{ label: "Contact", href: "/contact" },
 	];
 
+	const lowerMenuItems = [
+		{ label: "Solar Power", href: "/about" },
+		{ label: "Wind Power", href: "/services" },
+		{ label: "Hybrid Power", href: "/projects" },
+		{ label: "Solar Parks", href: "/news" },
+		{ label: "Operational Excellence", href: "/contact" },
+	];
+
 	useEffect(() => {
 		const handleResize = () => {
 			setIsMobile(window.innerWidth < 768);
@@ -39,20 +47,37 @@ export default function Navbar() {
 	};
 
 	return (
-		<div className="flex justify-center items-center h-24 w-full border-b sticky top-0 z-50 bg-white">
+		<div className="flex justify-center items-center h-24 lg:h-32 w-full border-b sticky top-0 z-50 bg-white">
 			<div className="w-full max-w-6xl mx-auto flex justify-between items-center px-4">
 				<div>
-					<Image src="/logo.png" alt="logo" width={50} height={50} />
+					<Image src="/full-logo.jpeg" alt="logo-ct" width={300} height={250} />
 				</div>
 				{!isMobile ? (
 					<>
 						<div>
-							<ul className="flex items-center gap-4">
+							<ul className="flex items-center gap-4 pb-4 border-b border-gray-600">
 								{menuItems.map((item) => (
 									<li key={item.label}>
 										<Link href={item.href}>
 											<span
-												className={`px-3 py-2 rounded-md transition-colors ${
+												className={`px-3 py-2 rounded-md transition-colors text-sm ${
+													pathname === item.href
+														? "bg-black text-white"
+														: "hover:bg-gray-400 transition duration-300 ease-in-out"
+												}`}
+											>
+												{item.label}
+											</span>
+										</Link>
+									</li>
+								))}
+							</ul>
+							<ul className="flex items-center gap-4 pt-4">
+								{lowerMenuItems.map((item) => (
+									<li key={item.label}>
+										<Link href={item.href}>
+											<span
+												className={`px-3 py-2 rounded-md transition-colors text-sm ${
 													pathname === item.href
 														? "bg-black text-white"
 														: "hover:bg-gray-400 transition duration-300 ease-in-out"
@@ -102,6 +127,24 @@ export default function Navbar() {
 			{isMobile && isMobileMenuOpen && (
 				<div className="fixed inset-0 bg-white z-50 pt-24">
 					<div className="flex flex-col items-center">
+						<ul className="flex flex-col items-center gap-4 mb-4">
+							{lowerMenuItems.map((item) => (
+								<li key={item.label}>
+									<Link href={item.href}>
+										<span
+											className={`px-3 py-2 rounded-sm transition-colors ${
+												pathname === item.href
+													? "bg-black text-white"
+													: "hover:bg-gray-400 transition duration-300 ease-in-out"
+											}`}
+											onClick={() => setIsMobileMenuOpen(false)}
+										>
+											{item.label}
+										</span>
+									</Link>
+								</li>
+							))}
+						</ul>
 						<ul className="flex flex-col items-center gap-4 mb-4">
 							{menuItems.map((item) => (
 								<li key={item.label}>
