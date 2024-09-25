@@ -1,3 +1,4 @@
+import Footer from "./components/Footer";
 import Energy from "./components/homepage-components/Energy";
 import Hero from "./components/homepage-components/Hero";
 import Leadership from "./components/homepage-components/Leadership";
@@ -12,6 +13,7 @@ export default function Home() {
 			<LongCard />
 			<Leadership />
 			<Sustainablilty />
+			<Footer />
 		</main>
 	);
 }

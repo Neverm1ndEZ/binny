@@ -11,17 +11,21 @@ import Image from "next/image";
 export function Sustainablilty() {
 	return (
 		<div className="mt-10 p-4 lg:p-0">
-			<h1 className="text-xl text-blue-gray-800">Sustainability and Us</h1>
+			<div className="flex justify-start border-b border-black">
+				<h1 className="text-base uppercase font-semibold text-center">
+					Sustainability and Us
+				</h1>
+			</div>
 			<div className="p-4 flex items-center justify-between gap-4">
 				<Card
-					className="mt-6 w-96"
+					className="pt-6 w-96 shadow-2xl"
 					placeholder=""
 					onPointerEnterCapture={() => {}}
 					onPointerLeaveCapture={() => {}}
 				>
 					<CardHeader
 						color="blue-gray"
-						className="relative h-56"
+						className="relative top-2 h-56"
 						placeholder=""
 						onPointerEnterCapture={() => {}}
 						onPointerLeaveCapture={() => {}}
@@ -31,7 +35,7 @@ export function Sustainablilty() {
 							alt="card-image"
 							layout="fill" // This makes the image responsive
 							objectFit="cover" // Makes the image cover the container
-							className="rounded"
+							className="rounded shadow-lg"
 						/>
 					</CardHeader>
 					<CardBody
@@ -75,14 +79,14 @@ export function Sustainablilty() {
 					</CardFooter>
 				</Card>
 				<Card
-					className="mt-6 w-96"
+					className="pt-6 w-96 shadow-2xl"
 					placeholder=""
 					onPointerEnterCapture={() => {}}
 					onPointerLeaveCapture={() => {}}
 				>
 					<CardHeader
 						color="blue-gray"
-						className="relative h-56"
+						className="relative top-2 h-56"
 						placeholder=""
 						onPointerEnterCapture={() => {}}
 						onPointerLeaveCapture={() => {}}
@@ -92,7 +96,7 @@ export function Sustainablilty() {
 							alt="card-image"
 							layout="fill" // This makes the image responsive
 							objectFit="cover" // Makes the image cover the container
-							className="rounded"
+							className="rounded shadow-lg"
 						/>
 					</CardHeader>
 					<CardBody
@@ -136,24 +140,24 @@ export function Sustainablilty() {
 					</CardFooter>
 				</Card>
 				<Card
-					className="mt-6 w-96"
+					className="pt-6 w-96 shadow-2xl"
 					placeholder=""
 					onPointerEnterCapture={() => {}}
 					onPointerLeaveCapture={() => {}}
 				>
 					<CardHeader
 						color="blue-gray"
-						className="relative h-56"
+						className="relative top-2 h-56"
 						placeholder=""
 						onPointerEnterCapture={() => {}}
 						onPointerLeaveCapture={() => {}}
 					>
 						<Image
-							src="/sus-2.png"
+							src="/sustainibility-2.png"
 							alt="card-image"
 							layout="fill" // This makes the image responsive
 							objectFit="cover" // Makes the image cover the container
-							className="rounded"
+							className="rounded shadow-lg"
 						/>
 					</CardHeader>
 					<CardBody
