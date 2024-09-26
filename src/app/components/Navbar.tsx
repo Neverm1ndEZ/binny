@@ -22,11 +22,10 @@ export default function Navbar() {
 	];
 
 	const lowerMenuItems = [
+		{ label: "Ethanol Power", href: "/about" },
 		{ label: "Solar Power", href: "/about" },
 		{ label: "Wind Power", href: "/services" },
-		{ label: "Hybrid Power", href: "/projects" },
-		{ label: "Solar Parks", href: "/news" },
-		{ label: "Operational Excellence", href: "/contact" },
+		{ label: "Hydrogen Power", href: "/projects" },
 	];
 
 	useEffect(() => {
@@ -47,7 +46,7 @@ export default function Navbar() {
 	};
 
 	return (
-		<div className="flex justify-center items-center h-24 lg:h-32 w-full border-b sticky top-0 z-50 bg-white">
+		<div className="flex justify-center items-center h-24 lg:h-32 w-full border-b border-gray-700 sticky top-0 z-50 bg-white">
 			<div className="w-full max-w-6xl mx-auto flex justify-between items-center px-4">
 				<div>
 					<Image src="/full-logo.jpeg" alt="logo-ct" width={300} height={250} />

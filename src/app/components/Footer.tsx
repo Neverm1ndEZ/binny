@@ -5,19 +5,18 @@ import Image from "next/image";
 export default function Footer() {
 	const menuItems = [
 		{ label: "Home", href: "/" },
-		{ label: "About Us", href: "/about" },
-		{ label: "Services", href: "/services" },
-		{ label: "Projects", href: "/projects" },
-		{ label: "News", href: "/news" },
-		{ label: "Contact", href: "/contact" },
+		{ label: "About Us", href: "/" },
+		{ label: "Services", href: "/" },
+		{ label: "Projects", href: "/" },
+		{ label: "News", href: "/" },
+		{ label: "Contact", href: "/" },
 	];
 
 	const lowerMenuItems = [
-		{ label: "Solar Power", href: "/about" },
-		{ label: "Wind Power", href: "/services" },
-		{ label: "Hybrid Power", href: "/projects" },
-		{ label: "Solar Parks", href: "/news" },
-		{ label: "Operational Excellence", href: "/contact" },
+		{ label: "Ethanol", href: "/" },
+		{ label: "Solar", href: "/" },
+		{ label: "Wind", href: "/" },
+		{ label: "Hydrogen", href: "/" },
 	];
 
 	return (
@@ -44,7 +43,7 @@ export default function Footer() {
 								</li>
 							))}
 						</ul>
-						<ul className="flex flex-wrap items-center gap-y-2 gap-x-8">
+						<ul className="flex flex-wrap items-center justify-between gap-y-2 gap-x-8">
 							{lowerMenuItems.map((item, index) => (
 								<li key={index}>
 									<Typography

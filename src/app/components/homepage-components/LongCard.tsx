@@ -22,7 +22,7 @@ export default function LongCard() {
 			<div className="grid grid-cols-2 items-start py-6">
 				<div className="relative w-[600px] h-[350px]" data-aos="zoom-in-up">
 					<Image
-						src="/solar.jpg"
+						src="/solar-new.jpg"
 						alt="Image"
 						layout="fill"
 						objectFit="cover"
@@ -61,7 +61,7 @@ export default function LongCard() {
 				</div>
 				<div className="relative w-[600px] h-[400px]" data-aos="fade-left">
 					<Image
-						src="/solar.jpg"
+						src="/wind_mobile.jpg"
 						alt="Image"
 						layout="fill" // This makes the image responsive
 						objectFit="cover" // Makes the image cover the container
@@ -72,7 +72,7 @@ export default function LongCard() {
 			<div className="grid grid-cols-2 items-start py-6">
 				<div className="relative w-[600px] h-[400px]" data-aos="zoom-in-down">
 					<Image
-						src="/solar.jpg"
+						src="/hydrogen.png"
 						alt="Image"
 						layout="fill" // This makes the image responsive
 						objectFit="cover" // Makes the image cover the container
@@ -80,7 +80,7 @@ export default function LongCard() {
 					/>
 				</div>
 				<div className="grid gap-y-5">
-					<h2 className="text-4xl font-semibold">Hybrid</h2>
+					<h2 className="text-4xl font-semibold">Hydrogen</h2>
 					<p className="max-w-[600px]">
 						Our engineering capabilities help us design cost-efficient projects,
 						which are backed by a thorough analysis of the land, solar

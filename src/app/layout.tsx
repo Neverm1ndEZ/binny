@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import Navbar from "./components/Navbar";
+import NewNav from "./components/NewNav";
 import "./globals.css";
 import { MaterialProvider } from "./providers";
 
@@ -31,7 +31,7 @@ export default function RootLayout({
 				className={`${geistSans.variable} ${geistMono.variable} antialiased`}
 			>
 				<MaterialProvider>
-					<Navbar />
+					<NewNav />
 					<div className="flex flex-col min-h-screen items-center justify-center mx-auto">
 						{children}
 					</div>
