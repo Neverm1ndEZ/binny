@@ -11,8 +11,8 @@ import { Modal } from "../Modal";
 export function Sustainablilty() {
 	return (
 		<div className="mt-10 p-4 lg:p-0">
-			<div className="flex justify-start border-b border-black">
-				<h1 className="text-base uppercase font-semibold text-center">
+			<div className="flex justify-start border-b border-green-700">
+				<h1 className=" text-base uppercase font-semibold text-center text-green-600">
 					Sustainability and Us
 				</h1>
 			</div>

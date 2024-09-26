@@ -14,8 +14,8 @@ export default function LongCard() {
 
 	return (
 		<div className="mt-10 px-4 lg:px-0 max-w-7xl mx-auto">
-			<div className="flex justify-start border-b border-black">
-				<h1 className="text-base uppercase font-semibold text-center">
+			<div className="flex justify-start border-b border-green-700">
+				<h1 className=" text-base uppercase font-semibold text-center text-green-600">
 					Propelling Decarbonization With
 				</h1>
 			</div>
@@ -51,7 +51,7 @@ function CardItem({
 }) {
 	return (
 		<div
-			className={`flex flex-col ${
+			className={`flex flex-col bg-gray-100 ${
 				imagePosition === "right" ? "lg:flex-row-reverse" : "lg:flex-row"
 			} items-start gap-6 p-4 lg:p-6 shadow-2xl rounded-lg`}
 		>
@@ -67,7 +67,9 @@ function CardItem({
 				</div>
 			</div>
 			<div className="w-full lg:w-1/2 space-y-4">
-				<h2 className="text-3xl lg:text-4xl font-semibold">{title}</h2>
+				<h2 className="text-3xl lg:text-4xl font-semibold text-green-700">
+					{title}
+				</h2>
 				<p className="text-sm lg:text-base">
 					Our engineering capabilities help us design cost-efficient projects,
 					which are backed by a thorough analysis of the land, solar radiation,

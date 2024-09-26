@@ -20,6 +20,7 @@ export function Modal({ buttonText }: { buttonText: string }) {
 				placeholder=""
 				onPointerEnterCapture={() => {}}
 				onPointerLeaveCapture={() => {}}
+				color="light-green"
 			>
 				{buttonText}
 			</Button>

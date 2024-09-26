@@ -21,7 +21,7 @@ export default function Footer() {
 
 	return (
 		<div className="mt-10 px-4 lg:px-0">
-			<div className="flex justify-start border-b border-black"></div>
+			<div className="flex justify-start border-b border-green-700"></div>
 			<footer className="w-full bg-white py-8">
 				<div className="flex flex-col md:flex-row items-center justify-center gap-y-6 md:gap-y-0 md:justify-between">
 					<Image src="/full-logo.jpeg" alt="logo-ct" width={300} height={250} />

@@ -96,7 +96,7 @@ export default function EnhancedNav() {
 									{lowerMenuItems.map((item) => (
 										<li key={item.label}>
 											<a href={item.href}>
-												<span className="flex items-center justify-center w-20 px-3 py-2 rounded-md text-sm bg-[#646464] text-white hover:bg-gray-700 transition duration-300 ease-in-out">
+												<span className="flex items-center font-semibold justify-center w-20 px-3 py-2 rounded-md text-sm bg-light-green-500 text-white hover:bg-gray-700 transition duration-300 ease-in-out">
 													{item.label}
 												</span>
 											</a>
@@ -141,7 +141,7 @@ export default function EnhancedNav() {
 							>
 								<Menu size={24} />
 							</button>
-							<div className="relative mt-2">
+							{/* <div className="relative mt-2">
 								{isSearchOpen ? (
 									<div className="flex items-center">
 										<input
@@ -164,7 +164,7 @@ export default function EnhancedNav() {
 										<Search size={20} />
 									</button>
 								)}
-							</div>
+							</div> */}
 						</>
 					)}
 				</div>
