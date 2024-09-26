@@ -7,118 +7,77 @@ import "aos/dist/aos.css";
 export default function LongCard() {
 	useEffect(() => {
 		AOS.init({
-			duration: 1000, // Adjust the duration if needed
-			easing: "ease-in-out", // You can change this to other AOS options
+			duration: 1000,
+			easing: "ease-in-out",
 		});
 	}, []);
 
 	return (
-		<div className="mt-10 p-4 lg:p-0">
+		<div className="mt-10 px-4 lg:px-0 max-w-7xl mx-auto">
 			<div className="flex justify-start border-b border-black">
 				<h1 className="text-base uppercase font-semibold text-center">
 					Propelling Decarbonization With
 				</h1>
 			</div>
-			<div className="m-4 space-y-4">
-				<div className="grid lg:grid-cols-2 items-start p-4 lg:py-6 gap-4 shadow-2xl rounded-lg">
-					<h2 className="block lg:hidden text-4xl font-semibold">Solar</h2>
-					<div
-						className="relative w-[420px] lg:w-[600px] h-[350px]"
-						data-aos="zoom-in-up"
-					>
-						<Image
-							src="/solar-new.jpg"
-							alt="Image"
-							layout="fill"
-							objectFit="cover"
-							className="rounded"
-						/>
-					</div>
-					<div className="grid gap-y-5">
-						<h2 className="hidden lg:block text-4xl font-semibold">Solar</h2>
-						<p className="lg:max-w-[600px]">
-							Our engineering capabilities help us design cost-efficient
-							projects, which are backed by a thorough analysis of the land,
-							solar radiation, grid connection infrastructure, and emerging
-							technologies. Our project design also considers various factors
-							such as the geographical location, climate conditions, temperature
-							and its impact on equipment, local facilities as well as potential
-							maintenance requirements. We thus ensure that all our capital
-							investment projects are carried out after considering and studying
-							the risks involved.
-						</p>
-					</div>
+			<div className="mt-4 space-y-8">
+				<CardItem
+					title="Solar"
+					imageSrc="/solar-new.jpg"
+					imagePosition="left"
+				/>
+				<CardItem
+					title="Wind"
+					imageSrc="/wind_mobile.jpg"
+					imagePosition="right"
+				/>
+				<CardItem
+					title="Hydrogen"
+					imageSrc="/hydrogen.png"
+					imagePosition="left"
+				/>
+			</div>
+		</div>
+	);
+}
+
+function CardItem({
+	title,
+	imageSrc,
+	imagePosition,
+}: {
+	title: string;
+	imageSrc: string;
+	imagePosition: "left" | "right";
+}) {
+	return (
+		<div
+			className={`flex flex-col ${
+				imagePosition === "right" ? "lg:flex-row-reverse" : "lg:flex-row"
+			} items-start gap-6 p-4 lg:p-6 shadow-2xl rounded-lg`}
+		>
+			<div className="w-full lg:w-1/2" data-aos="zoom-in-up">
+				<div className="relative w-full aspect-[4/3]">
+					<Image
+						src={imageSrc}
+						alt={title}
+						layout="fill"
+						objectFit="cover"
+						className="rounded"
+					/>
 				</div>
-				<div className="grid lg:grid-cols-2 items-start p-4 lg:py-6 gap-4 shadow-2xl rounded-lg">
-					<h2 className="block lg:hidden text-4xl font-semibold">Wind</h2>
-					<div
-						className="block lg:hidden relative w-[420px] lg:w-[600px] h-[350px]"
-						data-aos="zoom-in-up"
-					>
-						<Image
-							src="/wind_mobile.jpg"
-							alt="Image"
-							layout="fill"
-							objectFit="cover"
-							className="rounded"
-						/>
-					</div>
-					<div className="grid gap-y-5">
-						<h2 className="hidden lg:block text-4xl font-semibold">Wind</h2>
-						<p className="lg:max-w-[600px]">
-							Our engineering capabilities help us design cost-efficient
-							projects, which are backed by a thorough analysis of the land,
-							solar radiation, grid connection infrastructure, and emerging
-							technologies. Our project design also considers various factors
-							such as the geographical location, climate conditions, temperature
-							and its impact on equipment, local facilities as well as potential
-							maintenance requirements. We thus ensure that all our capital
-							investment projects are carried out after considering and studying
-							the risks involved.
-						</p>
-					</div>
-					<div
-						className="hidden lg:block relative w-[420px] lg:w-[600px] h-[350px]"
-						data-aos="zoom-in-up"
-					>
-						<Image
-							src="/wind_mobile.jpg"
-							alt="Image"
-							layout="fill"
-							objectFit="cover"
-							className="rounded"
-						/>
-					</div>
-				</div>
-				<div className="grid lg:grid-cols-2 items-start p-4 lg:py-6 gap-4 shadow-2xl rounded-lg">
-					<h2 className="block lg:hidden text-4xl font-semibold">Hydrogen</h2>
-					<div
-						className="relative w-[420px] lg:w-[600px] h-[350px]"
-						data-aos="zoom-in-up"
-					>
-						<Image
-							src="/hydrogen.png"
-							alt="Image"
-							layout="fill"
-							objectFit="cover"
-							className="rounded"
-						/>
-					</div>
-					<div className="grid gap-y-5">
-						<h2 className="hidden lg:block text-4xl font-semibold">Hydrogen</h2>
-						<p className="lg:max-w-[600px]">
-							Our engineering capabilities help us design cost-efficient
-							projects, which are backed by a thorough analysis of the land,
-							solar radiation, grid connection infrastructure, and emerging
-							technologies. Our project design also considers various factors
-							such as the geographical location, climate conditions, temperature
-							and its impact on equipment, local facilities as well as potential
-							maintenance requirements. We thus ensure that all our capital
-							investment projects are carried out after considering and studying
-							the risks involved.
-						</p>
-					</div>
-				</div>
+			</div>
+			<div className="w-full lg:w-1/2 space-y-4">
+				<h2 className="text-3xl lg:text-4xl font-semibold">{title}</h2>
+				<p className="text-sm lg:text-base">
+					Our engineering capabilities help us design cost-efficient projects,
+					which are backed by a thorough analysis of the land, solar radiation,
+					grid connection infrastructure, and emerging technologies. Our project
+					design also considers various factors such as the geographical
+					location, climate conditions, temperature and its impact on equipment,
+					local facilities as well as potential maintenance requirements. We
+					thus ensure that all our capital investment projects are carried out
+					after considering and studying the risks involved.
+				</p>
 			</div>
 		</div>
 	);

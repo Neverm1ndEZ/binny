@@ -27,12 +27,15 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
+			<head>
+				<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+			</head>
 			<body
 				className={`${geistSans.variable} ${geistMono.variable} antialiased`}
 			>
 				<MaterialProvider>
 					<NewNav />
-					<div className="flex flex-col min-h-screen items-center justify-center mx-auto">
+					<div className="flex flex-col min-h-screen items-center justify-center mx-auto max-w-full">
 						{children}
 					</div>
 				</MaterialProvider>

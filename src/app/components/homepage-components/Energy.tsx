@@ -2,27 +2,27 @@ import { MoveUpRight } from "lucide-react";
 
 export default function Energy() {
 	return (
-		<div className="mt-10 p-4 lg:p-0">
+		<div className="mt-10 px-4 lg:px-0">
 			<div className="flex justify-start border-b border-black">
 				<h1 className="text-base uppercase font-semibold text-center">
 					Energy
 				</h1>
 			</div>
 			<div className="flex flex-col lg:flex-row justify-center lg:justify-between items-center lg:items-start py-8 gap-y-6">
-				<div className="flex flex-col items-start lg:w-1/2">
+				<div className="flex flex-col items-start w-full lg:w-1/2">
 					<h1 className="text-4xl font-semibold">Clean Power</h1>
-					<p className="text-sm lg:max-w-[350px] mt-4 font-light">
+					<p className="text-sm max-w-full lg:max-w-[350px] mt-4 font-light">
 						Powering the future with clean, renewable solar energy. Join us for
 						a brighter, sustainable tomorrow.
 					</p>
 				</div>
-				<div className="flex flex-col items-start lg:w-1/2 gap-y-6">
+				<div className="flex flex-col items-start w-full lg:w-1/2 gap-y-6">
 					<div className="font-light">
 						Join <span className="font-semibold">Binny</span> to lead the future
 						of renewable energy with innovative solar solutions. Contribute to
 						sustainability and professional growth
 					</div>
-					<div className="flex items-center gap-x-28 w-3/4">
+					<div className="flex items-center justify-between w-full">
 						<div className="flex flex-col items-start justify-start gap-y-8">
 							<div>
 								<h1 className="text-3xl font-light border-b border-black pb-2 w-full">
