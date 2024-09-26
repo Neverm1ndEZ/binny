@@ -60,10 +60,10 @@ export default function EnhancedNav() {
 					<div className="flex items-center ">
 						<Image src="/logo.png" alt="logo-ct" width={70} height={50} />
 						<div className="grid place-items-center">
-							<h1 className="text-base font-medium">
+							<h1 className="text-base font-bold">
 								Binny New Re Energy Limited
 							</h1>
-							<h1 className="text-[10px]">
+							<h1 className="text-[10px] font-semibold">
 								Fuel Ethanol, Bio Diesel, Windmills and Solar Energy
 							</h1>
 						</div>
@@ -92,11 +92,11 @@ export default function EnhancedNav() {
 						)}
 						{!isMobile && (
 							<div className="w-full">
-								<ul className="flex items-center justify-center gap-16 py-2 rounded-lg">
+								<ul className="flex items-center justify-center gap-[3.5rem] py-2 rounded-lg">
 									{lowerMenuItems.map((item) => (
 										<li key={item.label}>
 											<a href={item.href}>
-												<span className="flex items-center font-semibold justify-center w-20 px-3 py-2 rounded-md text-sm bg-light-green-500 text-white hover:bg-gray-700 transition duration-300 ease-in-out">
+												<span className="flex items-center font-semibold justify-center w-20 px-3 py-2 rounded-md text-base text-green-700 hover:text-green-300 transition duration-300 ease-in-out">
 													{item.label}
 												</span>
 											</a>

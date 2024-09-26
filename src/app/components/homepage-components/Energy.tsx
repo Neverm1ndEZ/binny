@@ -1,72 +1,58 @@
+import React from "react";
 import { MoveUpRight } from "lucide-react";
 
-export default function Energy() {
+interface StatProps {
+	value: string;
+	label: string;
+}
+
+const Stat: React.FC<StatProps> = ({ value, label }) => (
+	<div className="group cursor-pointer">
+		<h1 className="text-3xl lg:text-4xl font-light w-full transition-all duration-300 ease-out group-hover:-translate-y-2 group-hover:text-green-700">
+			{value}
+		</h1>
+		<p className="font-light uppercase text-xs pt-2 transition-colors duration-300 group-hover:text-green-600">
+			{label}
+		</p>
+	</div>
+);
+
+const Energy: React.FC = () => {
 	return (
-		<div className="mt-10 px-4 lg:px-0">
-			<div className="flex justify-start border-b border-green-700">
-				<h1 className=" text-base uppercase font-semibold text-center text-green-600">
+		<div className="mt-16 px-4 lg:px-0">
+			<div className="flex justify-start mb-6">
+				<h1 className="text-xl uppercase font-bold text-green-700 border-b-2 border-green-500 pb-2">
 					Energy
 				</h1>
 			</div>
-			<div className="flex flex-col lg:flex-row justify-center lg:justify-between items-center lg:items-start py-8 gap-y-6">
-				<div className="flex flex-col items-start w-full lg:w-1/2">
-					<h1 className="text-4xl font-semibold text-green-700">Clean Power</h1>
-					<p className="text-sm max-w-full lg:max-w-[350px] mt-4 font-light">
-						Powering the future with clean, renewable solar energy. Join us for
-						a brighter, sustainable tomorrow.
-					</p>
-				</div>
-				<div className="flex flex-col items-start w-full lg:w-1/2 gap-y-6">
-					<div className="font-light">
-						Join <span className="font-semibold text-green-800">Binny</span> to
-						lead the future of renewable energy with innovative solar solutions.
-						Contribute to sustainability and professional growth
+			<div className="rounded-xl overflow-hidden bg-gradient-to-br from-green-100 via-green-50 to-white">
+				<div className="flex flex-col lg:flex-row justify-between items-start py-12 px-8 gap-y-10">
+					<div className="flex flex-col items-start w-full lg:w-1/2 space-y-6">
+						<h2 className="text-4xl lg:text-5xl font-bold text-green-800 leading-tight">
+							Clean Power for a <br />
+							Sustainable Future
+						</h2>
+						<p className="text-base lg:text-lg max-w-md text-green-700">
+							Powering the future with clean, renewable solar energy. Join us
+							for a brighter, sustainable tomorrow.
+						</p>
 					</div>
-					<div className="flex items-center justify-between w-full">
-						<div className="flex flex-col items-start justify-start gap-y-8">
-							<div>
-								<h1 className="text-3xl font-light border-b border-black pb-2 w-full">
-									85%
-								</h1>
-								<p className="font-light uppercase text-[10px] pt-2">
-									Financial Returns
-								</p>
-							</div>
-							<div>
-								<h1 className="text-3xl font-light border-b border-black pb-2 w-full">
-									75%
-								</h1>
-								<p className="font-light uppercase text-[10px] pt-2">
-									Adoption Rates
-								</p>
-							</div>
+					<div className="flex flex-col items-start w-full lg:w-1/2 space-y-10">
+						<p className="text-base lg:text-lg text-green-700">
+							Join <span className="font-semibold text-green-800">Binny</span>{" "}
+							to lead the future of renewable energy with innovative solar
+							solutions. Contribute to sustainability and professional growth.
+						</p>
+						<div className="grid grid-cols-2 gap-x-16 gap-y-10 w-full">
+							<Stat value="85%" label="Financial Returns" />
+							<Stat value="95%" label="System Performance" />
+							<Stat value="75%" label="Adoption Rates" />
+							<Stat value="65%" label="Customer Growth" />
 						</div>
-						<div className="flex flex-col items-start justify-start gap-y-8">
-							<div>
-								<h1 className="text-3xl font-light border-b border-black pb-2 w-full">
-									95%
-								</h1>
-								<p className="font-light uppercase text-[10px] pt-2">
-									System Performance
-								</p>
-							</div>
-							<div>
-								<h1 className="text-3xl font-light border-b border-black pb-2 w-full">
-									65%
-								</h1>
-								<p className="font-light uppercase text-[10px] pt-2">
-									Customer Growth
-								</p>
-							</div>
-						</div>
-					</div>
-					<div className="flex items-start">
-						<button className="flex flex-row-reverse items-center gap-3 rounded-full px-8 py-4 transition duration-300 ease-in-out group relative">
-							<span className="absolute inset-0 rounded-full border-2 border-black group-hover:border-transparent"></span>
-							<span className="absolute inset-0 rounded-full bg-black opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-							<MoveUpRight className="w-5 h-5 relative z-10 group-hover:filter group-hover:brightness-0 group-hover:invert transition-all duration-300" />
-							<span className="relative z-10 group-hover:text-white transition-colors duration-300">
+						<button className="group relative overflow-hidden rounded-full bg-green-600 px-8 py-4 transition-all duration-300 hover:bg-green-700">
+							<span className="relative z-10 flex items-center justify-center text-white transition-all duration-300 group-hover:text-green-100">
 								Get in Touch
+								<MoveUpRight className="ml-2 h-5 w-5 transition-all duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
 							</span>
 						</button>
 					</div>
@@ -74,4 +60,6 @@ export default function Energy() {
 			</div>
 		</div>
 	);
-}
+};
+
+export default Energy;

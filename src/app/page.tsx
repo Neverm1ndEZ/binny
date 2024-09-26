@@ -1,9 +1,10 @@
 import Footer from "./components/Footer";
+import Contact from "./components/homepage-components/Contact";
 import Energy from "./components/homepage-components/Energy";
 import Hero from "./components/homepage-components/Hero";
 import Leadership from "./components/homepage-components/Leadership";
 import LongCard from "./components/homepage-components/LongCard";
-import { Sustainablilty } from "./components/homepage-components/Sustainablilty";
+import { Sustainability } from "./components/homepage-components/Sustainablilty";
 
 export default function Home() {
 	return (
@@ -12,7 +13,8 @@ export default function Home() {
 			<Energy />
 			<LongCard />
 			<Leadership />
-			<Sustainablilty />
+			<Sustainability />
+			<Contact />
 			<Footer />
 		</main>
 	);
