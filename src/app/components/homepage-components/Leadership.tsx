@@ -2,7 +2,6 @@
 import Image from "next/image";
 import React from "react";
 import { Modal } from "../Modal";
-import { Carousel, IconButton } from "@material-tailwind/react";
 
 interface LeadershipCardProps {
 	name: string;
@@ -44,80 +43,19 @@ export default function Leadership() {
 					Leadership Speaks
 				</h1>
 			</div>
-			<div className="w-full bg-gradient-to-b from-green-200 to-white rounded-xl p-8">
-				<Carousel
-					className="rounded-xl"
-					placeholder=""
-					onPointerEnterCapture=""
-					onPointerLeaveCapture=""
-					prevArrow={({ handlePrev }) => (
-						<IconButton
-							variant="text"
-							color="black"
-							size="lg"
-							onClick={handlePrev}
-							className="!absolute top-2/4 left-4 -translate-y-2/4"
-							placeholder=""
-							onPointerEnterCapture=""
-							onPointerLeaveCapture=""
-						>
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								fill="none"
-								viewBox="0 0 24 24"
-								strokeWidth={2}
-								stroke="currentColor"
-								className="h-6 w-6"
-							>
-								<path
-									strokeLinecap="round"
-									strokeLinejoin="round"
-									d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"
-								/>
-							</svg>
-						</IconButton>
-					)}
-					nextArrow={({ handleNext }) => (
-						<IconButton
-							variant="text"
-							color="black"
-							size="lg"
-							onClick={handleNext}
-							placeholder=""
-							onPointerEnterCapture=""
-							onPointerLeaveCapture=""
-							className="!absolute top-2/4 !right-4 -translate-y-2/4"
-						>
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								fill="none"
-								viewBox="0 0 24 24"
-								strokeWidth={2}
-								stroke="currentColor"
-								className="h-6 w-6"
-							>
-								<path
-									strokeLinecap="round"
-									strokeLinejoin="round"
-									d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
-								/>
-							</svg>
-						</IconButton>
-					)}
-				>
-					<LeadershipCard
-						name="John Doe"
-						position="Managing Director"
-						message="We are committed to creating a greener future. Our vision is to have a portfolio of 50 GW of RE capacity by 2030."
-						imageSrc="/dummy.jpg"
-					/>
-					<LeadershipCard
-						name="Jane Smith"
-						position="Chief Sustainability Officer"
-						message="Our goal is to lead the transition to renewable energy, fostering innovation and sustainable practices across the industry."
-						imageSrc="/dummy.jpg"
-					/>
-				</Carousel>
+			<div className="w-full grid lg:grid-cols-2 gap-8 bg-gradient-to-b from-green-200 to-white rounded-xl p-8">
+				<LeadershipCard
+					name="John Doe"
+					position="Managing Director"
+					message="We are committed to creating a greener future. Our vision is to have a portfolio of 50 GW of RE capacity by 2030."
+					imageSrc="/dummy.jpg"
+				/>
+				<LeadershipCard
+					name="Jane Smith"
+					position="Chief Sustainability Officer"
+					message="Our goal is to lead the transition to renewable energy, fostering innovation and sustainable practices across the industry."
+					imageSrc="/dummy.jpg"
+				/>
 			</div>
 		</div>
 	);

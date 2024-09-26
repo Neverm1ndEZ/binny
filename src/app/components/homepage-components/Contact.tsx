@@ -43,85 +43,75 @@ const Contact: React.FC = () => {
 	};
 
 	return (
-		<div className="px-4 lg:px-0">
-			{/* Contact Us heading */}
-			<div className="flex justify-start my-6">
-				<h1 className=" text-xl uppercase font-bold text-green-700 border-b-2 border-green-500">
-					Contact Us
+		<main className="bg-[#f0f5f1] flex flex-col justify-center items-center p-8 md:p-16">
+			{toast && (
+				<Toast
+					message={toast.message}
+					type={toast.type}
+					onClose={() => setToast(null)}
+				/>
+			)}
+			<section className="bg-white p-10 md:p-14 rounded-xl shadow-lg max-w-3xl w-full space-y-6">
+				{/* Subheading */}
+				<h1 className="text-3xl font-bold text-green-600 text-center">
+					Get in Touch
 				</h1>
-			</div>
 
-			{/* Main Section */}
-			<main className="bg-[#f0f5f1] flex flex-col justify-center items-center p-8 md:p-16">
-				{toast && (
-					<Toast
-						message={toast.message}
-						type={toast.type}
-						onClose={() => setToast(null)}
-					/>
-				)}
-				<section className="bg-white p-10 md:p-14 rounded-xl shadow-lg max-w-3xl w-full space-y-6">
-					{/* Subheading */}
-					<h1 className="text-3xl font-bold text-green-600 text-center">
-						Get in Touch
-					</h1>
-
-					{/* Form */}
-					<form onSubmit={sendMail} className="space-y-6">
-						{/* Name */}
-						<div className="flex flex-col md:flex-row gap-6">
-							<input
-								type="text"
-								id="firstName"
-								name="firstName"
-								placeholder="First Name"
-								className="w-full bg-[#f5f5f5] p-4 rounded-lg border border-gray-300 focus:border-green-500 focus:ring-2 focus:ring-green-500 focus:outline-none"
-								required
-							/>
-							<input
-								type="text"
-								id="lastName"
-								name="lastName"
-								placeholder="Last Name"
-								className="w-full bg-[#f5f5f5] p-4 rounded-lg border border-gray-300 focus:border-green-500 focus:ring-2 focus:ring-green-500 focus:outline-none"
-								required
-							/>
-						</div>
-
-						{/* Company Email */}
+				{/* Form */}
+				<form onSubmit={sendMail} className="space-y-6">
+					{/* Name */}
+					<div className="flex flex-col md:flex-row gap-6">
 						<input
-							type="email"
-							id="companyEmail"
-							name="companyEmail"
-							placeholder="Company Email"
+							type="text"
+							id="firstName"
+							name="firstName"
+							placeholder="First Name"
 							className="w-full bg-[#f5f5f5] p-4 rounded-lg border border-gray-300 focus:border-green-500 focus:ring-2 focus:ring-green-500 focus:outline-none"
 							required
 						/>
-
-						{/* Message */}
-						<textarea
-							id="message"
-							name="message"
-							placeholder="Your Message"
-							rows={5}
-							className="w-full bg-[#f5f5f5] p-4 rounded-lg border border-gray-300 focus:border-green-500 focus:ring-2 focus:ring-green-500 focus:outline-none resize-none"
+						<input
+							type="text"
+							id="lastName"
+							name="lastName"
+							placeholder="Last Name"
+							className="w-full bg-[#f5f5f5] p-4 rounded-lg border border-gray-300 focus:border-green-500 focus:ring-2 focus:ring-green-500 focus:outline-none"
 							required
-						></textarea>
+						/>
+					</div>
 
-						{/* Submit Button */}
-						<button
-							type="submit"
-							className={`w-full py-3 text-lg font-semibold text-white bg-green-500 rounded-lg hover:bg-green-600 transition-colors duration-300 ${
-								isSubmitting ? "opacity-50 cursor-not-allowed" : ""
-							}`}
-							disabled={isSubmitting}
-						>
-							{isSubmitting ? "Submitting..." : "Send Message"}
-						</button>
-					</form>
-				</section>
-			</main>
-		</div>
+					{/* Company Email */}
+					<input
+						type="email"
+						id="companyEmail"
+						name="companyEmail"
+						placeholder="Company Email"
+						className="w-full bg-[#f5f5f5] p-4 rounded-lg border border-gray-300 focus:border-green-500 focus:ring-2 focus:ring-green-500 focus:outline-none"
+						required
+					/>
+
+					{/* Message */}
+					<textarea
+						id="message"
+						name="message"
+						placeholder="Your Message"
+						rows={5}
+						className="w-full bg-[#f5f5f5] p-4 rounded-lg border border-gray-300 focus:border-green-500 focus:ring-2 focus:ring-green-500 focus:outline-none resize-none"
+						required
+					></textarea>
+
+					{/* Submit Button */}
+					<button
+						type="submit"
+						className={`w-full py-3 text-lg font-semibold text-white bg-green-500 rounded-lg hover:bg-green-600 transition-colors duration-300 ${
+							isSubmitting ? "opacity-50 cursor-not-allowed" : ""
+						}`}
+						disabled={isSubmitting}
+					>
+						{isSubmitting ? "Submitting..." : "Send Message"}
+					</button>
+				</form>
+			</section>
+		</main>
 	);
 };
 

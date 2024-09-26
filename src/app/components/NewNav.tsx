@@ -177,7 +177,7 @@ export default function EnhancedNav() {
 								<li key={item.label}>
 									<a href={item.href}>
 										<span
-											className="px-3 py-2 rounded-sm hover:bg-blue-100 transition duration-300 ease-in-out"
+											className="px-3 py-2 rounded-sm text-green-700 hover:text-green-300 transition duration-300 ease-in-out"
 											onClick={() => setIsMobileMenuOpen(false)}
 										>
 											{item.label}
