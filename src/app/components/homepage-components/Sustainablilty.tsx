@@ -16,7 +16,7 @@ export function Sustainablilty() {
 					Sustainability and Us
 				</h1>
 			</div>
-			<div className="p-4 flex items-center justify-between gap-4">
+			<div className="p-4 flex flex-col lg:flex-row items-center justify-between gap-4">
 				<Card
 					className="pt-6 w-96 shadow-2xl hover:scale-105 transition duration-300 ease-in-out"
 					placeholder=""

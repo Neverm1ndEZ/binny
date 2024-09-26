@@ -11,7 +11,7 @@ export default function Leadership() {
 					Message from our Leadership
 				</h1>
 			</div>
-			<div className="grid grid-cols-2 items-center justify-between p-4 w-full">
+			<div className="grid lg:grid-cols-2 items-center justify-between p-4 w-full gap-y-4">
 				<div className="flex items-center gap-4">
 					<div className="flex relative w-[200px] h-[150px]">
 						<Image

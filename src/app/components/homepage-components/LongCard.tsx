@@ -19,8 +19,11 @@ export default function LongCard() {
 					Propelling Decarbonization With
 				</h1>
 			</div>
-			<div className="grid grid-cols-2 items-start py-6">
-				<div className="relative w-[600px] h-[350px]" data-aos="zoom-in-up">
+			<div className="grid lg:grid-cols-2 items-start p-4 lg:py-6 gap-4">
+				<div
+					className="relative w-[420px] lg:w-[600px] h-[350px]"
+					data-aos="zoom-in-up"
+				>
 					<Image
 						src="/solar-new.jpg"
 						alt="Image"
@@ -31,7 +34,7 @@ export default function LongCard() {
 				</div>
 				<div className="grid gap-y-5">
 					<h2 className="text-4xl font-semibold">Solar</h2>
-					<p className="max-w-[600px]">
+					<p className="lg:max-w-[600px]">
 						Our engineering capabilities help us design cost-efficient projects,
 						which are backed by a thorough analysis of the land, solar
 						radiation, grid connection infrastructure, and emerging
@@ -44,10 +47,22 @@ export default function LongCard() {
 					</p>
 				</div>
 			</div>
-			<div className="grid grid-cols-2 items-start py-6">
+			<div className="grid lg:grid-cols-2 items-start p-4 lg:py-6 gap-4">
+				<div
+					className="block lg:hidden relative w-[420px] lg:w-[600px] h-[350px]"
+					data-aos="zoom-in-up"
+				>
+					<Image
+						src="/wind_mobile.jpg"
+						alt="Image"
+						layout="fill"
+						objectFit="cover"
+						className="rounded"
+					/>
+				</div>
 				<div className="grid gap-y-5">
 					<h2 className="text-4xl font-semibold">Wind</h2>
-					<p className="max-w-[600px]">
+					<p className="lg:max-w-[600px]">
 						Our engineering capabilities help us design cost-efficient projects,
 						which are backed by a thorough analysis of the land, solar
 						radiation, grid connection infrastructure, and emerging
@@ -59,29 +74,35 @@ export default function LongCard() {
 						the risks involved.
 					</p>
 				</div>
-				<div className="relative w-[600px] h-[400px]" data-aos="fade-left">
+				<div
+					className="hidden lg:block relative w-[420px] lg:w-[600px] h-[350px]"
+					data-aos="zoom-in-up"
+				>
 					<Image
 						src="/wind_mobile.jpg"
 						alt="Image"
-						layout="fill" // This makes the image responsive
-						objectFit="cover" // Makes the image cover the container
+						layout="fill"
+						objectFit="cover"
 						className="rounded"
 					/>
 				</div>
 			</div>
-			<div className="grid grid-cols-2 items-start py-6">
-				<div className="relative w-[600px] h-[400px]" data-aos="zoom-in-down">
+			<div className="grid lg:grid-cols-2 items-start p-4 lg:py-6 gap-4">
+				<div
+					className="relative w-[420px] lg:w-[600px] h-[350px]"
+					data-aos="zoom-in-up"
+				>
 					<Image
 						src="/hydrogen.png"
 						alt="Image"
-						layout="fill" // This makes the image responsive
-						objectFit="cover" // Makes the image cover the container
+						layout="fill"
+						objectFit="cover"
 						className="rounded"
 					/>
 				</div>
 				<div className="grid gap-y-5">
 					<h2 className="text-4xl font-semibold">Hydrogen</h2>
-					<p className="max-w-[600px]">
+					<p className="lg:max-w-[600px]">
 						Our engineering capabilities help us design cost-efficient projects,
 						which are backed by a thorough analysis of the land, solar
 						radiation, grid connection infrastructure, and emerging

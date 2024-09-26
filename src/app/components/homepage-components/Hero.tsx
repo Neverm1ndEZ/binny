@@ -58,15 +58,15 @@ export default function Hero() {
 function HeroContent() {
 	return (
 		<div className="absolute inset-0 flex items-center justify-center">
-			<div className="max-w-[1000px] w-full text-center px-4 [text-shadow:_0_4px_0_rgb(0_0_0_/_40%)]">
-				<h1 className="text-3xl lg:text-7xl font-bold mb-4 text-white">
+			<div className="w-full max-w-7xl px-4 sm:px-6 lg:px-8 text-center [text-shadow:_0_4px_0_rgb(0_0_0_/_40%)]">
+				<h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-7xl font-bold mb-2 sm:mb-4 text-white">
 					Clean energy for{" "}
-					<span className="bg-gradient-to-r from-lime-700 to-blue-300 px-4 py-1">
+					<span className="bg-gradient-to-r from-lime-700 to-blue-300 px-2 sm:px-4 py-1">
 						bright
 					</span>{" "}
 					tomorrow.
 				</h1>
-				<p className="text-sm lg:text-base font-light mb-8 text-white max-w-2xl mx-auto">
+				<p className="text-xs sm:text-sm md:text-base font-light mb-4 sm:mb-8 text-white max-w-lg sm:max-w-xl md:max-w-2xl mx-auto">
 					Join us to go clean, protect Earth, and power your future sustainably.
 				</p>
 			</div>
