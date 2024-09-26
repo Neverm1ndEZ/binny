@@ -17,7 +17,7 @@ export default function Hero() {
 			<Carousel
 				autoplay={true}
 				loop={true}
-				autoplayDelay={6000}
+				autoplayDelay={5700}
 				className="w-full h-full"
 				navigation={({ setActiveIndex, activeIndex }) => (
 					<div className="absolute bottom-4 left-2/4 z-50 flex -translate-x-2/4 gap-2">
@@ -33,6 +33,8 @@ export default function Hero() {
 					</div>
 				)}
 				placeholder=""
+				prevArrow={() => null}
+				nextArrow={() => null}
 				onPointerEnterCapture={() => {}}
 				onPointerLeaveCapture={() => {}}
 			>

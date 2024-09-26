@@ -15,7 +15,7 @@ export default function Leadership() {
 				<div className="flex items-center gap-4">
 					<div className="flex relative w-[200px] h-[150px]">
 						<Image
-							src="/dir1.png"
+							src="/dummy.jpg"
 							alt="Image"
 							layout="fill" // This makes the image responsive
 							objectFit="contain" // Makes the image cover the container
@@ -23,9 +23,7 @@ export default function Leadership() {
 						/>
 					</div>
 					<div className="flex flex-col justify-start items-start gap-y-2">
-						<h2 className="text-2xl font-semibold text-blue-500">
-							Vineet Jain
-						</h2>
+						<h2 className="text-2xl font-semibold text-blue-500">John Doe</h2>
 						<h3 className="text-base font-medium">Managing Director</h3>
 						<p className="max-w-[320px] text-sm">
 							We are committed to create a greener future. Our vision is to have
@@ -37,7 +35,7 @@ export default function Leadership() {
 				<div className="flex items-center gap-4">
 					<div className="flex relative w-[200px] h-[150px]">
 						<Image
-							src="/dir2.png"
+							src="/dummy.jpg"
 							alt="Image"
 							layout="fill" // This makes the image responsive
 							objectFit="contain" // Makes the image cover the container
@@ -45,9 +43,7 @@ export default function Leadership() {
 						/>
 					</div>
 					<div className="flex flex-col justify-start items-start gap-y-2">
-						<h2 className="text-2xl font-semibold text-blue-500">
-							Vineet Jain
-						</h2>
+						<h2 className="text-2xl font-semibold text-blue-500">Doe John</h2>
 						<h3 className="text-base font-medium">Managing Director</h3>
 						<p className="max-w-[320px] text-sm">
 							We are committed to create a greener future. Our vision is to have

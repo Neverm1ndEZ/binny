@@ -19,100 +19,105 @@ export default function LongCard() {
 					Propelling Decarbonization With
 				</h1>
 			</div>
-			<div className="grid lg:grid-cols-2 items-start p-4 lg:py-6 gap-4">
-				<div
-					className="relative w-[420px] lg:w-[600px] h-[350px]"
-					data-aos="zoom-in-up"
-				>
-					<Image
-						src="/solar-new.jpg"
-						alt="Image"
-						layout="fill"
-						objectFit="cover"
-						className="rounded"
-					/>
+			<div className="m-4 space-y-4">
+				<div className="grid lg:grid-cols-2 items-start p-4 lg:py-6 gap-4 shadow-2xl rounded-lg">
+					<h2 className="block lg:hidden text-4xl font-semibold">Solar</h2>
+					<div
+						className="relative w-[420px] lg:w-[600px] h-[350px]"
+						data-aos="zoom-in-up"
+					>
+						<Image
+							src="/solar-new.jpg"
+							alt="Image"
+							layout="fill"
+							objectFit="cover"
+							className="rounded"
+						/>
+					</div>
+					<div className="grid gap-y-5">
+						<h2 className="hidden lg:block text-4xl font-semibold">Solar</h2>
+						<p className="lg:max-w-[600px]">
+							Our engineering capabilities help us design cost-efficient
+							projects, which are backed by a thorough analysis of the land,
+							solar radiation, grid connection infrastructure, and emerging
+							technologies. Our project design also considers various factors
+							such as the geographical location, climate conditions, temperature
+							and its impact on equipment, local facilities as well as potential
+							maintenance requirements. We thus ensure that all our capital
+							investment projects are carried out after considering and studying
+							the risks involved.
+						</p>
+					</div>
 				</div>
-				<div className="grid gap-y-5">
-					<h2 className="text-4xl font-semibold">Solar</h2>
-					<p className="lg:max-w-[600px]">
-						Our engineering capabilities help us design cost-efficient projects,
-						which are backed by a thorough analysis of the land, solar
-						radiation, grid connection infrastructure, and emerging
-						technologies. Our project design also considers various factors such
-						as the geographical location, climate conditions, temperature and
-						its impact on equipment, local facilities as well as potential
-						maintenance requirements. We thus ensure that all our capital
-						investment projects are carried out after considering and studying
-						the risks involved.
-					</p>
+				<div className="grid lg:grid-cols-2 items-start p-4 lg:py-6 gap-4 shadow-2xl rounded-lg">
+					<h2 className="block lg:hidden text-4xl font-semibold">Wind</h2>
+					<div
+						className="block lg:hidden relative w-[420px] lg:w-[600px] h-[350px]"
+						data-aos="zoom-in-up"
+					>
+						<Image
+							src="/wind_mobile.jpg"
+							alt="Image"
+							layout="fill"
+							objectFit="cover"
+							className="rounded"
+						/>
+					</div>
+					<div className="grid gap-y-5">
+						<h2 className="hidden lg:block text-4xl font-semibold">Wind</h2>
+						<p className="lg:max-w-[600px]">
+							Our engineering capabilities help us design cost-efficient
+							projects, which are backed by a thorough analysis of the land,
+							solar radiation, grid connection infrastructure, and emerging
+							technologies. Our project design also considers various factors
+							such as the geographical location, climate conditions, temperature
+							and its impact on equipment, local facilities as well as potential
+							maintenance requirements. We thus ensure that all our capital
+							investment projects are carried out after considering and studying
+							the risks involved.
+						</p>
+					</div>
+					<div
+						className="hidden lg:block relative w-[420px] lg:w-[600px] h-[350px]"
+						data-aos="zoom-in-up"
+					>
+						<Image
+							src="/wind_mobile.jpg"
+							alt="Image"
+							layout="fill"
+							objectFit="cover"
+							className="rounded"
+						/>
+					</div>
 				</div>
-			</div>
-			<div className="grid lg:grid-cols-2 items-start p-4 lg:py-6 gap-4">
-				<div
-					className="block lg:hidden relative w-[420px] lg:w-[600px] h-[350px]"
-					data-aos="zoom-in-up"
-				>
-					<Image
-						src="/wind_mobile.jpg"
-						alt="Image"
-						layout="fill"
-						objectFit="cover"
-						className="rounded"
-					/>
-				</div>
-				<div className="grid gap-y-5">
-					<h2 className="text-4xl font-semibold">Wind</h2>
-					<p className="lg:max-w-[600px]">
-						Our engineering capabilities help us design cost-efficient projects,
-						which are backed by a thorough analysis of the land, solar
-						radiation, grid connection infrastructure, and emerging
-						technologies. Our project design also considers various factors such
-						as the geographical location, climate conditions, temperature and
-						its impact on equipment, local facilities as well as potential
-						maintenance requirements. We thus ensure that all our capital
-						investment projects are carried out after considering and studying
-						the risks involved.
-					</p>
-				</div>
-				<div
-					className="hidden lg:block relative w-[420px] lg:w-[600px] h-[350px]"
-					data-aos="zoom-in-up"
-				>
-					<Image
-						src="/wind_mobile.jpg"
-						alt="Image"
-						layout="fill"
-						objectFit="cover"
-						className="rounded"
-					/>
-				</div>
-			</div>
-			<div className="grid lg:grid-cols-2 items-start p-4 lg:py-6 gap-4">
-				<div
-					className="relative w-[420px] lg:w-[600px] h-[350px]"
-					data-aos="zoom-in-up"
-				>
-					<Image
-						src="/hydrogen.png"
-						alt="Image"
-						layout="fill"
-						objectFit="cover"
-						className="rounded"
-					/>
-				</div>
-				<div className="grid gap-y-5">
-					<h2 className="text-4xl font-semibold">Hydrogen</h2>
-					<p className="lg:max-w-[600px]">
-						Our engineering capabilities help us design cost-efficient projects,
-						which are backed by a thorough analysis of the land, solar
-						radiation, grid connection infrastructure, and emerging
-						technologies. Our project design also considers various factors such
-						as the geographical location, climate conditions, temperature and
-						its impact on equipment, local facilities as well as potential
-						maintenance requirements. We thus ensure that all our capital
-						investment projects are carried out after considering and studying
-						the risks involved.
-					</p>
+				<div className="grid lg:grid-cols-2 items-start p-4 lg:py-6 gap-4 shadow-2xl rounded-lg">
+					<h2 className="block lg:hidden text-4xl font-semibold">Hydrogen</h2>
+					<div
+						className="relative w-[420px] lg:w-[600px] h-[350px]"
+						data-aos="zoom-in-up"
+					>
+						<Image
+							src="/hydrogen.png"
+							alt="Image"
+							layout="fill"
+							objectFit="cover"
+							className="rounded"
+						/>
+					</div>
+					<div className="grid gap-y-5">
+						<h2 className="hidden lg:block text-4xl font-semibold">Hydrogen</h2>
+						<p className="lg:max-w-[600px]">
+							Our engineering capabilities help us design cost-efficient
+							projects, which are backed by a thorough analysis of the land,
+							solar radiation, grid connection infrastructure, and emerging
+							technologies. Our project design also considers various factors
+							such as the geographical location, climate conditions, temperature
+							and its impact on equipment, local facilities as well as potential
+							maintenance requirements. We thus ensure that all our capital
+							investment projects are carried out after considering and studying
+							the risks involved.
+						</p>
+					</div>
 				</div>
 			</div>
 		</div>
