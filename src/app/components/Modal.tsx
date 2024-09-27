@@ -1,4 +1,4 @@
-"use client";
+import React from "react";
 import {
 	Button,
 	Dialog,
@@ -6,23 +6,61 @@ import {
 	DialogHeader,
 	Typography,
 } from "@material-tailwind/react";
-import React from "react";
 
-export function Modal({ buttonText }: { buttonText: string }) {
+interface ModalProps {
+	buttonText: string;
+	heading?: string;
+	message?: string | string[];
+}
+
+export function Modal({ buttonText, heading, message }: ModalProps) {
 	const [open, setOpen] = React.useState(false);
 
 	const handleOpen = () => setOpen(!open);
+
+	const defaultHeading = "Default Heading";
+	const defaultMessage = [
+		"This is a default message for the modal. You can replace it with your own content.",
+	];
+
+	const renderMessage = () => {
+		const messageContent = message || defaultMessage;
+		if (typeof messageContent === "string") {
+			return (
+				<Typography
+					className="font-normal"
+					placeholder=""
+					onPointerEnterCapture=""
+					onPointerLeaveCapture=""
+				>
+					{messageContent}
+				</Typography>
+			);
+		} else {
+			return messageContent.map((paragraph, index) => (
+				<Typography
+					key={index}
+					className="font-normal mb-4"
+					placeholder=""
+					onPointerEnterCapture=""
+					onPointerLeaveCapture=""
+				>
+					{paragraph}
+				</Typography>
+			));
+		}
+	};
 
 	return (
 		<>
 			<Button
 				onClick={handleOpen}
-				placeholder=""
-				onPointerEnterCapture={() => {}}
-				onPointerLeaveCapture={() => {}}
 				color="green"
 				variant="text"
-				className="p-0 hover:p-4 "
+				className="p-0 hover:p-4"
+				placeholder=""
+				onPointerEnterCapture=""
+				onPointerLeaveCapture=""
 			>
 				{buttonText}
 			</Button>
@@ -30,31 +68,31 @@ export function Modal({ buttonText }: { buttonText: string }) {
 				open={open}
 				handler={handleOpen}
 				placeholder=""
-				onPointerEnterCapture={() => {}}
-				onPointerLeaveCapture={() => {}}
+				onPointerEnterCapture=""
+				onPointerLeaveCapture=""
 			>
 				<div className="flex items-center justify-between">
 					<DialogHeader
 						className="flex flex-col items-start"
 						placeholder=""
-						onPointerEnterCapture={() => {}}
-						onPointerLeaveCapture={() => {}}
+						onPointerEnterCapture=""
+						onPointerLeaveCapture=""
 					>
 						<Typography
 							className="mb-1"
 							variant="h4"
 							placeholder=""
-							onPointerEnterCapture={() => {}}
-							onPointerLeaveCapture={() => {}}
+							onPointerEnterCapture=""
+							onPointerLeaveCapture=""
 						>
-							Long Modal
+							{heading || defaultHeading}
 						</Typography>
 					</DialogHeader>
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						viewBox="0 0 24 24"
 						fill="currentColor"
-						className="mr-3 h-5 w-5"
+						className="mr-3 h-5 w-5 cursor-pointer"
 						onClick={handleOpen}
 					>
 						<path
@@ -67,48 +105,10 @@ export function Modal({ buttonText }: { buttonText: string }) {
 				<DialogBody
 					className="h-[42rem] overflow-scroll"
 					placeholder=""
-					onPointerEnterCapture={() => {}}
-					onPointerLeaveCapture={() => {}}
+					onPointerEnterCapture=""
+					onPointerLeaveCapture=""
 				>
-					<Typography
-						className="font-normal"
-						placeholder=""
-						onPointerEnterCapture={() => {}}
-						onPointerLeaveCapture={() => {}}
-					>
-						I&apos;ve always had unwavering confidence in my abilities, and I
-						believe our thoughts and self-perception are the primary forces that
-						shape us. Many people limit themselves by their own self-doubt,
-						slowing their progress. Fortunately, I was raised with the belief
-						that I could achieve anything.
-						<br />
-						<br />
-						As we journey through life, we often encounter challenges that
-						harden our hearts. Pain, insults, broken trust, and betrayal can
-						make us hesitant to help others. Love can lead to heartbreak, and
-						time can distance us from family. These experiences can gradually
-						erode our optimism.
-						<br /> <br />
-						Life doesn&apos;t always place us where we want to be. We grow, make
-						mistakes, and strive to express ourselves and fulfill our dreams. If
-						we&apos;re fortunate enough to participate in life&apos;s journey,
-						we should cherish every moment. Regrettably, some only recognize the
-						value of a moment after it&apos;s passed.
-						<br /> <br />
-						One thing I&apos;ve learned is that I can excel at anything I set my
-						mind to. My skill is my ability to learn. I&apos;m here to learn, to
-						grow, and to inspire others to do the same. Don&apos;t fear making
-						mistakes; they teach us far more than compliments ever will.
-						Ultimately, what truly matters is how our actions inspire and
-						motivate others. Some will be ignited by our endeavors, while others
-						may be offended—it&apos;s all part of the process. I&apos;m here to
-						pursue my dreams and encourage others to do the same.
-						<br /> <br />
-						Now is the time to embrace greatness without fear of judgment. Some
-						may resent those who shine brightly or stand out, but it&apos;s time
-						to be the best version of ourselves. Do you have faith in your
-						beliefs, even if you&apos;re the only one who does?
-					</Typography>
+					{renderMessage()}
 				</DialogBody>
 			</Dialog>
 		</>
