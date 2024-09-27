@@ -9,7 +9,7 @@ export default function Hero() {
 		"/solar-new.jpg",
 		"/solar-wind.jpg",
 		"/wind-web.jpg",
-		"/ethanol.jpeg",
+		"/eth.jpg",
 	];
 
 	return (
