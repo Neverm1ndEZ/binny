@@ -43,7 +43,10 @@ const Contact: React.FC = () => {
 	};
 
 	return (
-		<main className="bg-[#f0f5f1] flex flex-col justify-center items-center p-8 md:p-16">
+		<main
+			className="bg-[#f0f5f1] flex flex-col justify-center items-center p-8 md:p-16"
+			id="contact"
+		>
 			{toast && (
 				<Toast
 					message={toast.message}

@@ -18,7 +18,7 @@ const LeadershipCard: React.FC<LeadershipCardProps> = ({
 	imageSrc,
 	longMessage,
 }) => (
-	<div className="lg:pl-20 flex flex-col sm:flex-row items-center gap-6 rounded-lg shadow-2xl p-6 bg-white">
+	<div className="flex flex-col sm:flex-row items-center gap-6 rounded-lg shadow-2xl p-6 bg-white">
 		<div className="relative w-[200px] h-[200px] flex-shrink-0">
 			<Image
 				src={imageSrc}

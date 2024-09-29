@@ -1,17 +1,36 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import NewNav from "./components/NewNav";
 import "./globals.css";
 import { MaterialProvider } from "./providers";
+import { NavbarFinal } from "./components/Navbar";
+// import { Montserrat } from "next/font/google";
 
-const geistSans = localFont({
-	src: "./fonts/GeistVF.woff",
-	variable: "--font-geist-sans",
+// const monst = Montserrat({
+// 	subsets: ["latin"],
+// 	display: "swap",
+// });
+
+// const geistSans = localFont({
+// 	src: "./fonts/GeistVF.woff",
+// 	variable: "--font-geist-sans",
+// 	weight: "100 900",
+// });
+
+// const geistMono = localFont({
+// 	src: "./fonts/GeistMonoVF.woff",
+// 	variable: "--font-geist-mono",
+// 	weight: "100 900",
+// });
+
+const gothamBook = localFont({
+	src: "./fonts/GothamPro.woff",
+	variable: "--font-gotham-sans",
 	weight: "100 900",
 });
-const geistMono = localFont({
-	src: "./fonts/GeistMonoVF.woff",
-	variable: "--font-geist-mono",
+
+const gothamRegular = localFont({
+	src: "./fonts/GothamRegular.otf",
+	variable: "--font-gotham-bold",
 	weight: "100 900",
 });
 
@@ -31,10 +50,10 @@ export default function RootLayout({
 				<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 			</head>
 			<body
-				className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+				className={`${gothamBook.variable} ${gothamRegular.variable} antialiased font-sans`}
 			>
 				<MaterialProvider>
-					<NewNav />
+					<NavbarFinal />
 					<div className="flex flex-col min-h-screen items-center justify-center mx-auto max-w-full">
 						{children}
 					</div>

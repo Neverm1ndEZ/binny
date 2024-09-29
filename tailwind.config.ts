@@ -8,7 +8,12 @@ const config = withMT({
 		"./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
 	],
 	theme: {
-		extend: {},
+		extend: {
+			fontFamily: {
+				sans: ["var(--font-gotham-sans)"],
+				bold: ["var(--font-gotham-bold)"],
+			},
+		},
 	},
 	darkMode: "class",
 });
