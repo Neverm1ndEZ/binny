@@ -1,9 +1,10 @@
 "use client";
-import Image from "next/image";
-import React, { useEffect } from "react";
+import { Button } from "@material-tailwind/react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { Modal } from "../Modal";
+import Image from "next/image";
+import Link from "next/link";
+import React, { useEffect } from "react";
 
 interface CardItemProps {
 	title: string;
@@ -11,6 +12,7 @@ interface CardItemProps {
 	imagePosition: "left" | "right";
 	description: string;
 	longDescription: string;
+	href: string;
 }
 
 const CardItem: React.FC<CardItemProps> = ({
@@ -19,6 +21,7 @@ const CardItem: React.FC<CardItemProps> = ({
 	imagePosition,
 	description,
 	longDescription,
+	href,
 }) => {
 	return (
 		<div
@@ -46,7 +49,18 @@ const CardItem: React.FC<CardItemProps> = ({
 				{/* <button className="mt-4 px-6 py-2 bg-green-600 text-white rounded-full hover:bg-green-700 transition-colors duration-300 self-start">
 					Learn More
 				</button> */}
-				<Modal buttonText="Learn More" />
+				<Link href={href} className="w-full">
+					<Button
+						color="green"
+						variant="text"
+						className="p-0 hover:p-4 w-full"
+						placeholder=""
+						onPointerEnterCapture=""
+						onPointerLeaveCapture=""
+					>
+						{"Read More"}
+					</Button>
+				</Link>
 			</div>
 		</div>
 	);
@@ -63,17 +77,29 @@ const LongCard: React.FC = () => {
 
 	const cardItems: CardItemProps[] = [
 		{
+			title: "Ethanol Power Plant",
+			imageSrc: "/eth.jpg",
+			imagePosition: "right",
+			href: "/energy/ethanol",
+			description:
+				"Transforming agricultural resources into clean, renewable energy.",
+			longDescription:
+				"Our ethanol power plant represents a significant step towards sustainable energy production. We convert corn and other biomass feedstocks into ethanol, a renewable fuel that reduces greenhouse gas emissions compared to fossil fuels. Our state-of-the-art facility not only produces clean energy but also supports local agriculture, creates jobs, and contributes to energy independence. We're continuously improving our processes to maximize efficiency and minimize environmental impact, exploring advanced fermentation techniques and waste-to-energy solutions to create a truly circular economy approach to power generation.",
+		},
+		{
 			title: "Solar Energy",
 			imageSrc: "/solar-new.jpg",
 			imagePosition: "left",
 			description: "Harnessing the power of the sun for a sustainable future.",
 			longDescription:
 				"Our solar energy solutions leverage cutting-edge photovoltaic technology to convert sunlight into clean, renewable electricity. We design and implement large-scale solar farms and rooftop installations, optimizing energy production while minimizing environmental impact. Our projects consider factors such as geographical location, solar radiation levels, and local climate conditions to ensure maximum efficiency and return on investment.",
+			href: "/energy/solar",
 		},
 		{
 			title: "Wind Power",
 			imageSrc: "/wind_mobile.jpg",
 			imagePosition: "right",
+			href: "/energy/wind",
 			description: "Capturing the force of wind to generate clean electricity.",
 			longDescription:
 				"Our wind power initiatives focus on both onshore and offshore wind farm development. We utilize advanced turbine technology and sophisticated wind mapping techniques to identify optimal locations for wind energy harvesting. Our projects are designed to withstand various weather conditions while maximizing energy output. We also prioritize community engagement and environmental conservation in all our wind power developments.",
@@ -82,6 +108,7 @@ const LongCard: React.FC = () => {
 			title: "Hydrogen Technology",
 			imageSrc: "/hydrogen.png",
 			imagePosition: "left",
+			href: "/energy/hydrogen",
 			description: "Pioneering hydrogen solutions for a zero-emission future.",
 			longDescription:
 				"We're at the forefront of hydrogen technology, developing innovative solutions for clean energy storage and transportation. Our focus includes green hydrogen production through electrolysis, hydrogen fuel cell technology for vehicles, and hydrogen storage solutions for grid stabilization. We're also exploring the integration of hydrogen in industrial processes to reduce carbon emissions in hard-to-abate sectors.",

@@ -11,17 +11,14 @@ interface MenuItem {
 const menuItems: MenuItem[] = [
 	{ label: "Home", href: "/" },
 	{ label: "About Us", href: "/about" },
-	{ label: "Services", href: "/services" },
-	{ label: "Projects", href: "/projects" },
-	{ label: "News", href: "/news" },
-	{ label: "Contact", href: "/contact" },
+	{ label: "Contact", href: "#contact" },
 ];
 
 const lowerMenuItems: MenuItem[] = [
-	{ label: "Ethanol", href: "/ethanol" },
-	{ label: "Solar", href: "/solar" },
-	{ label: "Wind", href: "/wind" },
-	{ label: "Hydrogen", href: "/hydrogen" },
+	{ label: "Ethanol", href: "/energy/ethanol" },
+	{ label: "Solar", href: "/energy/solar" },
+	{ label: "Wind", href: "/energy/wind" },
+	{ label: "Hydrogen", href: "/energy/hydrogen" },
 ];
 
 export default function Footer() {
@@ -64,7 +61,7 @@ export default function Footer() {
 						</div>
 						<div>
 							<h3 className="text-lg font-semibold mb-4 text-green-700">
-								Our Solutions
+								Energy
 							</h3>
 							<ul className="space-y-2">
 								{lowerMenuItems.map((item) => (

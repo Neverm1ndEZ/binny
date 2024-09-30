@@ -1,4 +1,3 @@
-import Footer from "../Footer";
 import { FocusedInitiatives } from "./FocusedInitiatives";
 import HeroAbout from "./HeroAbout";
 import OurPurpose from "./OurPurpose";
@@ -11,7 +10,6 @@ export default function About() {
 			<OurPurpose />
 			<OurValues />
 			<FocusedInitiatives />
-			<Footer />
 		</div>
 	);
 }

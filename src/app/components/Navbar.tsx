@@ -1,13 +1,11 @@
 "use client";
 
-import React, { useState, useEffect, memo } from "react";
-import Image from "next/image";
 import {
 	Bars3Icon,
 	ChevronDownIcon,
 	XMarkIcon,
 } from "@heroicons/react/24/outline";
-import { Bars4Icon, SunIcon, UserGroupIcon } from "@heroicons/react/24/solid";
+import { SunIcon } from "@heroicons/react/24/solid";
 import {
 	Collapse,
 	IconButton,
@@ -20,9 +18,19 @@ import {
 	Navbar,
 	Typography,
 } from "@material-tailwind/react";
+import { Fuel, Wheat, Wind } from "lucide-react";
+import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
+import React, { memo, useEffect, useState } from "react";
 
 const navListMenuItems = [
+	{
+		title: "Ethanol",
+		description:
+			"Sustainable biofuels reducing emissions and fossil fuel dependence.",
+		icon: Wheat,
+		href: "ethanol",
+	},
 	{
 		title: "Solar",
 		description: "How we convert Solar Power into Energy",
@@ -31,20 +39,14 @@ const navListMenuItems = [
 	},
 	{
 		title: "Wind",
-		description: "Meet and learn about our dedication",
-		icon: UserGroupIcon,
+		description: "Clean wind power for a sustainable future.",
+		icon: Wind,
 		href: "wind",
 	},
 	{
-		title: "Ethanol",
-		description: "Find the perfect solution for your needs.",
-		icon: Bars4Icon,
-		href: "ethanol",
-	},
-	{
 		title: "Hydrogen",
-		description: "Learn how we can help you achieve your goals.",
-		icon: SunIcon,
+		description: "Innovative hydrogen solutions for energy security.",
+		icon: Fuel,
 		href: "hydrogen",
 	},
 ];
@@ -74,7 +76,7 @@ const NavListMenuItem = memo(
 				<div>
 					<Typography
 						variant="h6"
-						color="blue-gray"
+						color="green"
 						className="flex items-center text-sm font-bold"
 						placeholder={undefined}
 						onPointerEnterCapture={undefined}
@@ -190,7 +192,7 @@ const NavList = memo(() => {
 			onPointerEnterCapture={undefined}
 			onPointerLeaveCapture={undefined}
 		>
-			{navItems.map((item, index) => (
+			{navItems.slice(0, 1).map((item, index) => (
 				<Typography
 					key={index}
 					as="a"
@@ -216,6 +218,31 @@ const NavList = memo(() => {
 				</Typography>
 			))}
 			<NavListMenu />
+			{navItems.slice(1, 4).map((item, index) => (
+				<Typography
+					key={index}
+					as="a"
+					href={item.href}
+					variant="small"
+					color="blue-gray"
+					className="font-medium"
+					placeholder={undefined}
+					onPointerEnterCapture={undefined}
+					onPointerLeaveCapture={undefined}
+					onClick={(e) =>
+						handleClick(e as React.MouseEvent<HTMLAnchorElement>, item.href)
+					}
+				>
+					<ListItem
+						className="flex items-center gap-2 py-2 pr-4"
+						placeholder={undefined}
+						onPointerEnterCapture={undefined}
+						onPointerLeaveCapture={undefined}
+					>
+						{item.label}
+					</ListItem>
+				</Typography>
+			))}
 		</List>
 	);
 });
@@ -224,12 +251,17 @@ NavList.displayName = "NavList";
 
 export function NavbarFinal() {
 	const [openNav, setOpenNav] = useState(false);
+	const pathname = usePathname();
 
 	useEffect(() => {
 		const handleResize = () => window.innerWidth >= 960 && setOpenNav(false);
 		window.addEventListener("resize", handleResize);
 		return () => window.removeEventListener("resize", handleResize);
 	}, []);
+	// New useEffect to close navbar on route change
+	useEffect(() => {
+		setOpenNav(false);
+	}, [pathname]);
 
 	return (
 		<Navbar

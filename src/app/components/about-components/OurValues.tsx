@@ -68,25 +68,25 @@ const SustainabilityCard: React.FC<SustainabilityCardProps> = ({
 export const OurValues: React.FC = () => {
 	const sustainabilityItems: SustainabilityCardProps[] = [
 		{
-			imageSrc: "/sustainibility-1.png",
+			imageSrc: "/green-envirnoment.jpg",
 			title: "Pioneer",
 			description:
 				"Encourage creative and inspirational ideas, take bold calls, and respond to change in an agile manner to deliver sustainable future value.",
 		},
 		{
-			imageSrc: "/sustainibility-3.png",
+			imageSrc: "/green-envirnoment.jpg",
 			title: "Responsible",
 			description:
 				"Care for the planet, prioritize safety and deliver high-quality ESG-compliant solutions to clients with the highest ethical and governance standards.",
 		},
 		{
-			imageSrc: "/sustainibility-2.png",
+			imageSrc: "/green-envirnoment.jpg",
 			title: "Excellence",
 			description:
 				"Take charge and dive deep to build the best in class and deliver on time consistently by inculcating past learnings and embracing continuous improvement.",
 		},
 		{
-			imageSrc: "/sustainibility-2.png",
+			imageSrc: "/green-envirnoment.jpg",
 			title: "Partner",
 			description:
 				"Connected by trust and mutual respect, transcend boundaries and foster community-level collaboration across businesses and levels, by placing collective success over individual achievements.",

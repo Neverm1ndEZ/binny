@@ -758,11 +758,6 @@ export default function Page() {
 		case "/energy/ethanol":
 			return <Ethanol />;
 		default:
-			return (
-				<div>
-					<h3>Welcome to Energy Hub</h3>
-					<p>Select an energy source to learn more!</p>
-				</div>
-			);
+			return <Ethanol />;
 	}
 }

@@ -34,7 +34,7 @@ export default function HeroAbout() {
 			</div>
 
 			{/* marquee */}
-			<Marquee pauseOnHover className="py-8">
+			<Marquee pauseOnHover className="py-[10%]">
 				<div className="flex flex-col sm:flex-row justify-around gap-4 sm:gap-x-20 items-center w-full">
 					<Stat value="85%" label="Financial Returns" />
 					<Stat value="95%" label="System Performance" />

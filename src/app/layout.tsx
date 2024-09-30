@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { MaterialProvider } from "./providers";
 import { NavbarFinal } from "./components/Navbar";
+import Footer from "./components/Footer";
 // import { Montserrat } from "next/font/google";
 
 // const monst = Montserrat({
@@ -57,6 +58,7 @@ export default function RootLayout({
 					<div className="flex flex-col min-h-screen items-center justify-center mx-auto max-w-full">
 						{children}
 					</div>
+					<Footer />
 				</MaterialProvider>
 			</body>
 		</html>

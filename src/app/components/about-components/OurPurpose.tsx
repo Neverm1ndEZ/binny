@@ -23,7 +23,7 @@ export default function OurPurpose() {
 					<h1 className="text-2xl sm:text-4xl font-bold uppercase text-black">
 						Our Purpose
 					</h1>
-					<p className="text-4xl sm:text-7xl font-semibold text-green-300">
+					<p className="text-4xl sm:text-7xl font-semibold text-teal-200">
 						To create a carbon-free world by accelerating the clean energy
 						transition
 					</p>
@@ -51,23 +51,31 @@ export default function OurPurpose() {
 							Our Mission
 						</h1>
 						<div className="flex items-center gap-4 text-sm sm:text-base font-medium text-green-100">
-							<CheckCheck className="text-xl sm:text-2xl" /> Delivering
-							innovative clean energy systems for a greener future.
+							<div>
+								<CheckCheck className="text-2xl" />
+							</div>{" "}
+							Delivering innovative clean energy systems for a greener future.
 						</div>
 						<div className="flex items-center gap-4 text-sm sm:text-base font-medium text-green-100">
-							<CheckCheck className="text-xl sm:text-2xl" /> Lorem ipsum dolor
-							sit, amet consectetur adipisicing elit. Fugiat, ipsam suscipit.
-							Deserunt.
+							<div>
+								<CheckCheck className="text-2xl" />
+							</div>{" "}
+							Develop and produce cutting-edge biofuels and ethanol to reduce
+							carbon emissions and decrease fossil fuel dependence.
 						</div>
 						<div className="flex items-center gap-4 text-sm sm:text-base font-medium text-green-100">
-							<CheckCheck className="text-xl sm:text-2xl" /> Lorem ipsum dolor
-							sit amet consectetur adipisicing elit. Tempora doloribus soluta
-							iusto corporis veritatis!
+							<div>
+								<CheckCheck className="text-2xl" />
+							</div>{" "}
+							Harness innovative technology and renewable resources to create a
+							cleaner, greener future.
 						</div>
 						<div className="flex items-center gap-4 text-sm sm:text-base font-medium text-green-100">
-							<CheckCheck className="text-xl sm:text-2xl" /> Lorem ipsum dolor
-							sit amet consectetur adipisicing elit. Optio soluta quas ut,
-							debitis quidem minima iste?
+							<div>
+								<CheckCheck className="text-2xl" />
+							</div>{" "}
+							Foster partnerships with farmers, researchers, and communities for
+							responsible and efficient use of agricultural resources.
 						</div>
 					</div>
 				</div>

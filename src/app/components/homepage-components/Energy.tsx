@@ -1,5 +1,7 @@
+"use client";
 import React from "react";
 import { MoveUpRight } from "lucide-react";
+import Link from "next/link";
 
 interface StatProps {
 	value: string;
@@ -33,15 +35,15 @@ const Energy: React.FC = () => {
 							Sustainable Future
 						</h2>
 						<p className="text-base lg:text-lg max-w-md text-green-700">
-							Powering the future with clean, renewable solar energy. Join us
-							for a brighter, sustainable tomorrow.
+							Powering the future with clean, renewable energy. Join us for a
+							brighter, sustainable tomorrow.
 						</p>
 					</div>
 					<div className="flex flex-col items-start w-full lg:w-1/2 space-y-10">
 						<p className="text-base lg:text-lg text-green-700">
-							Join <span className="font-semibold text-green-800">Binny</span>{" "}
-							to lead the future of renewable energy with innovative solar
-							solutions. Contribute to sustainability and professional growth.
+							Join <span className="font-bold text-green-800">Binny</span> to
+							lead the future of renewable energy with innovative solutions.
+							Contribute to sustainability and professional growth.
 						</p>
 						<div className="grid grid-cols-2 gap-x-16 gap-y-10 w-full">
 							<Stat value="85%" label="Financial Returns" />
@@ -49,12 +51,14 @@ const Energy: React.FC = () => {
 							<Stat value="75%" label="Adoption Rates" />
 							<Stat value="65%" label="Customer Growth" />
 						</div>
-						<button className="group relative overflow-hidden rounded-full bg-green-600 px-8 py-4 transition-all duration-300 hover:bg-green-700">
-							<span className="relative z-10 flex items-center justify-center text-white transition-all duration-300 group-hover:text-green-100">
-								Get in Touch
-								<MoveUpRight className="ml-2 h-5 w-5 transition-all duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
-							</span>
-						</button>
+						<Link href={`#contact`}>
+							<button className="group relative overflow-hidden rounded-full bg-green-600 px-8 py-4 transition-all duration-300 hover:bg-green-700">
+								<span className="relative z-10 flex items-center justify-center text-white transition-all duration-300 group-hover:text-green-100">
+									Get in Touch
+									<MoveUpRight className="ml-2 h-5 w-5 transition-all duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
+								</span>
+							</button>
+						</Link>
 					</div>
 				</div>
 			</div>

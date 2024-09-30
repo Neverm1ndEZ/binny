@@ -7,7 +7,6 @@ export default function Hero() {
 	const images = [
 		"/hydrogen.png",
 		"/solar-new.jpg",
-		"/solar-wind.jpg",
 		"/wind-web.jpg",
 		"/eth.jpg",
 	];

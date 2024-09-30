@@ -24,7 +24,7 @@ const SustainabilityCard: React.FC<SustainabilityCardProps> = ({
 				className="transition-transform duration-300 hover:scale-105"
 			/>
 		</div>
-		<div className="p-6">
+		<div className="p-6 w-full">
 			<h3 className="text-2xl font-bold text-green-700 mb-3">{title}</h3>
 			<p className="text-gray-600 mb-4">{description}</p>
 			<Modal buttonText="Read More" />
@@ -35,19 +35,19 @@ const SustainabilityCard: React.FC<SustainabilityCardProps> = ({
 export const Sustainability: React.FC = () => {
 	const sustainabilityItems: SustainabilityCardProps[] = [
 		{
-			imageSrc: "/sustainibility-1.png",
+			imageSrc: "/green-env.jpg",
 			title: "Environmental Impact",
 			description:
 				"Explore our initiatives to reduce carbon footprint and promote sustainable practices across our operations.",
 		},
 		{
-			imageSrc: "/sustainibility-3.png",
+			imageSrc: "/green-envirnoment.jpg",
 			title: "Social Responsibility",
 			description:
 				"Learn about our community engagement programs and how we're fostering positive social change.",
 		},
 		{
-			imageSrc: "/sustainibility-2.png",
+			imageSrc: "/re.jpg",
 			title: "Sustainable Innovation",
 			description:
 				"Discover our cutting-edge research and development in renewable energy technologies.",

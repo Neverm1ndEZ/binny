@@ -37,19 +37,19 @@ const SustainabilityCard: React.FC<SustainabilityCardProps> = ({
 export const FocusedInitiatives: React.FC = () => {
 	const sustainabilityItems: SustainabilityCardProps[] = [
 		{
-			imageSrc: "/sustainibility-1.png",
+			imageSrc: "/green-env.jpg",
 			title: "Environmental Impact",
 			description:
 				"Explore our initiatives to reduce carbon footprint and promote sustainable practices across our operations.",
 		},
 		{
-			imageSrc: "/sustainibility-3.png",
+			imageSrc: "/green-envirnoment.jpg",
 			title: "Social Responsibility",
 			description:
 				"Learn about our community engagement programs and how we're fostering positive social change.",
 		},
 		{
-			imageSrc: "/sustainibility-2.png",
+			imageSrc: "/re.jpg",
 			title: "Sustainable Innovation",
 			description:
 				"Discover our cutting-edge research and development in renewable energy technologies.",
