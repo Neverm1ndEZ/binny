@@ -109,6 +109,14 @@ const NavListMenu = () => {
 		<NavListMenuItem key={index} {...item} />
 	));
 
+	const handleClick = () => {
+		setIsMobileMenuOpen((prev) => !prev);
+	};
+
+	const handleItemClick = () => {
+		setIsMobileMenuOpen(false);
+	};
+
 	return (
 		<>
 			<Menu
@@ -130,7 +138,7 @@ const NavListMenu = () => {
 						<ListItem
 							className="flex items-center gap-2 py-2 pr-4 font-medium text-gray-900"
 							selected={isMenuOpen || isMobileMenuOpen}
-							onClick={() => setIsMobileMenuOpen((cur) => !cur)}
+							onClick={handleClick}
 							placeholder={undefined}
 							onPointerEnterCapture={undefined}
 							onPointerLeaveCapture={undefined}
@@ -138,9 +146,9 @@ const NavListMenu = () => {
 							Energy
 							<ChevronDownIcon
 								strokeWidth={2.5}
-								className={`h-3 w-3 transition-transform ${
-									isMenuOpen ? "rotate-180" : ""
-								} ${isMobileMenuOpen ? "block lg:hidden" : "hidden lg:block"}`}
+								className={`h-3 w-3 transition-transform duration-150 ease-in-out ${
+									isMenuOpen || isMobileMenuOpen ? "rotate-180" : ""
+								}`}
 							/>
 						</ListItem>
 					</Typography>
@@ -157,7 +165,11 @@ const NavListMenu = () => {
 				</MenuList>
 			</Menu>
 			<div className="block lg:hidden">
-				<Collapse open={isMobileMenuOpen}>{renderItems}</Collapse>
+				<Collapse open={isMobileMenuOpen}>
+					{React.Children.map(renderItems, (child) =>
+						React.cloneElement(child, { onClick: handleItemClick }),
+					)}
+				</Collapse>
 			</div>
 		</>
 	);

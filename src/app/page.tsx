@@ -7,7 +7,7 @@ import { Sustainability } from "./components/homepage-components/Sustainablilty"
 
 export default function Home() {
 	return (
-		<main className="w-full px-4 sm:px-6 lg:px-0">
+		<main className="w-full sm:px-6 lg:px-0">
 			<Hero />
 			<div className="max-w-7xl mx-auto lg:px-8">
 				<Energy />
