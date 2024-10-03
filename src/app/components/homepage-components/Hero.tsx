@@ -5,10 +5,10 @@ import { Carousel } from "../../utils/util";
 
 export default function Hero() {
 	const images = [
+		"/eth.jpg",
 		"/hydrogen.png",
 		"/solar-new.jpg",
 		"/wind-web.jpg",
-		"/eth.jpg",
 	];
 
 	return (
