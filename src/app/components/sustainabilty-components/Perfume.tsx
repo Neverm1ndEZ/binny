@@ -41,21 +41,39 @@ export default function Perfume() {
 				<Typography
 					variant="h1"
 					className="text-5xl font-bold mb-4 text-green-900"
+					placeholder=""
+					onPointerEnterCapture={undefined}
+					onPointerLeaveCapture={undefined}
 				>
 					The Art of Fragrance
 				</Typography>
-				<Typography variant="lead" className="text-xl mb-8">
+				<Typography
+					variant="lead"
+					className="text-xl mb-8"
+					placeholder=""
+					onPointerEnterCapture={undefined}
+					onPointerLeaveCapture={undefined}
+				>
 					A Journey Through Scent: Exploring the delicate balance of notes and
 					the craft behind premium perfumes
 				</Typography>
 				<div className="flex justify-center gap-4">
-					<Button size="lg" className="bg-green-600 hover:bg-green-700">
+					<Button
+						size="lg"
+						className="bg-green-600 hover:bg-green-700"
+						placeholder=""
+						onPointerEnterCapture={undefined}
+						onPointerLeaveCapture={undefined}
+					>
 						Explore Collection
 					</Button>
 					<Button
 						size="lg"
 						variant="outlined"
 						className="border-green-600 text-green-600 hover:border-green-700"
+						placeholder=""
+						onPointerEnterCapture={undefined}
+						onPointerLeaveCapture={undefined}
 					>
 						Learn More
 					</Button>
@@ -71,7 +89,13 @@ export default function Perfume() {
 						className="h-full w-full object-cover rounded-xl shadow-lg"
 					/>
 				</div>
-				<Typography variant="small" className="text-center italic">
+				<Typography
+					variant="small"
+					className="text-center italic"
+					placeholder=""
+					onPointerEnterCapture={undefined}
+					onPointerLeaveCapture={undefined}
+				>
 					BNREL Team&apos;s Interaction with TIDCO MD Shri Sandeep Nanduri upon
 					their acceptance to participate in the companies upcoming 195KLD
 					Ethanol Project in Tuticorin - The team is seen gifting the MD with
@@ -85,15 +109,36 @@ export default function Perfume() {
 					<Card
 						key={index}
 						className="hover:shadow-lg transition-shadow border border-green-100"
+						placeholder=""
+						onPointerEnterCapture={undefined}
+						onPointerLeaveCapture={undefined}
 					>
-						<CardBody className="text-center">
+						<CardBody
+							className="text-center"
+							placeholder=""
+							onPointerEnterCapture={undefined}
+							onPointerLeaveCapture={undefined}
+						>
 							<div className="mb-4 w-12 h-12 mx-auto bg-green-50 rounded-full flex items-center justify-center">
 								{feature.icon}
 							</div>
-							<Typography variant="h5" className="mb-2 text-green-900">
+							<Typography
+								variant="h5"
+								className="mb-2 text-green-900"
+								placeholder=""
+								onPointerEnterCapture={undefined}
+								onPointerLeaveCapture={undefined}
+							>
 								{feature.title}
 							</Typography>
-							<Typography className="">{feature.description}</Typography>
+							<Typography
+								className=""
+								placeholder=""
+								onPointerEnterCapture={undefined}
+								onPointerLeaveCapture={undefined}
+							>
+								{feature.description}
+							</Typography>
 						</CardBody>
 					</Card>
 				))}
@@ -105,10 +150,19 @@ export default function Perfume() {
 					<Typography
 						variant="h3"
 						className="text-3xl font-semibold mb-6 text-green-700"
+						placeholder=""
+						onPointerEnterCapture={undefined}
+						onPointerLeaveCapture={undefined}
 					>
 						The Science of Scent
 					</Typography>
-					<Typography variant="paragraph" className="mb-6 text-lg">
+					<Typography
+						variant="paragraph"
+						className="mb-6 text-lg"
+						placeholder=""
+						onPointerEnterCapture={undefined}
+						onPointerLeaveCapture={undefined}
+					>
 						Creating a perfume is a delicate balance of art and science. Master
 						perfumers, known as &quot;noses&quot;, carefully layer different
 						notes to create a harmonious blend that evolves over time. Each
@@ -118,6 +172,9 @@ export default function Perfume() {
 					<Button
 						variant="outlined"
 						className="flex items-center gap-2 border-green-600 text-green-600 hover:border-green-700"
+						placeholder=""
+						onPointerEnterCapture={undefined}
+						onPointerLeaveCapture={undefined}
 					>
 						Learn More <Star className="h-4 w-4" />
 					</Button>
@@ -126,20 +183,55 @@ export default function Perfume() {
 
 			{/* Testimonials */}
 			<div className="mb-16">
-				<Typography variant="h4" className="text-center mb-8 text-green-700">
+				<Typography
+					variant="h4"
+					className="text-center mb-8 text-green-700"
+					placeholder=""
+					onPointerEnterCapture={undefined}
+					onPointerLeaveCapture={undefined}
+				>
 					What Our Customers Say
 				</Typography>
 				<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 					{testimonials.map((testimonial, index) => (
-						<Card key={index} className="border border-green-100">
-							<CardBody>
-								<Typography variant="paragraph" className="mb-4 italic">
-									"{testimonial.quote}"
+						<Card
+							key={index}
+							className="border border-green-100"
+							placeholder=""
+							onPointerEnterCapture={undefined}
+							onPointerLeaveCapture={undefined}
+						>
+							<CardBody
+								placeholder=""
+								onPointerEnterCapture={undefined}
+								onPointerLeaveCapture={undefined}
+							>
+								<Typography
+									variant="paragraph"
+									className="mb-4 italic"
+									placeholder=""
+									onPointerEnterCapture={undefined}
+									onPointerLeaveCapture={undefined}
+								>
+									&quot;{testimonial.quote}&quot;
 								</Typography>
-								<Typography variant="h6" className="">
+								<Typography
+									variant="h6"
+									className=""
+									placeholder=""
+									onPointerEnterCapture={undefined}
+									onPointerLeaveCapture={undefined}
+								>
 									{testimonial.author}
 								</Typography>
-								<Typography className="">{testimonial.role}</Typography>
+								<Typography
+									className=""
+									placeholder=""
+									onPointerEnterCapture={undefined}
+									onPointerLeaveCapture={undefined}
+								>
+									{testimonial.role}
+								</Typography>
 							</CardBody>
 						</Card>
 					))}

@@ -47,16 +47,35 @@ export default function FeedTheNeedy() {
 		<div className="max-w-7xl mx-auto px-4 py-12">
 			{/* Hero Section */}
 			<div className="text-center mb-12">
-				<Typography variant="h1" color="green" className="mb-4">
+				<Typography
+					variant="h1"
+					color="green"
+					className="mb-4"
+					placeholder=""
+					onPointerEnterCapture={undefined}
+					onPointerLeaveCapture={undefined}
+				>
 					Feed the Needy
 				</Typography>
-				<Typography variant="h4" color="blue-gray" className="mb-2">
+				<Typography
+					variant="h4"
+					color="blue-gray"
+					className="mb-2"
+					placeholder=""
+					onPointerEnterCapture={undefined}
+					onPointerLeaveCapture={undefined}
+				>
 					Making a Difference Through Sustainable Food Distribution
 				</Typography>
 			</div>
 
 			{/* Hero Image */}
-			<Card className="mb-12 overflow-hidden">
+			<Card
+				className="mb-12 overflow-hidden"
+				placeholder=""
+				onPointerEnterCapture={undefined}
+				onPointerLeaveCapture={undefined}
+			>
 				<img
 					src="/feed-the-needy.jpg"
 					alt="Volunteers distributing food"
@@ -65,12 +84,27 @@ export default function FeedTheNeedy() {
 			</Card>
 
 			{/* Introduction Card */}
-			<Card className="mb-12 bg-green-50">
-				<CardBody>
-					<Typography variant="lead" className="text-gray-700">
-						As our company leads the way in sustainable energy, we're also
+			<Card
+				className="mb-12 bg-green-50"
+				placeholder=""
+				onPointerEnterCapture={undefined}
+				onPointerLeaveCapture={undefined}
+			>
+				<CardBody
+					placeholder=""
+					onPointerEnterCapture={undefined}
+					onPointerLeaveCapture={undefined}
+				>
+					<Typography
+						variant="lead"
+						className="text-gray-700"
+						placeholder=""
+						onPointerEnterCapture={undefined}
+						onPointerLeaveCapture={undefined}
+					>
+						As our company leads the way in sustainable energy, we&apos;re also
 						committed to addressing another critical challenge in our community:
-						food insecurity. Through our Feed the Needy initiative, we're
+						food insecurity. Through our Feed the Needy initiative, we&apos;re
 						leveraging our resources and expertise to create a sustainable food
 						distribution system that helps those in need while reducing waste.
 					</Typography>
@@ -82,22 +116,46 @@ export default function FeedTheNeedy() {
 				{/* Article Body - 2 columns */}
 				<div className="lg:col-span-2 space-y-8">
 					<section>
-						<Card>
-							<CardBody>
-								<Typography variant="h3" color="blue-gray" className="mb-4">
-									The Challenge We're Addressing
+						<Card
+							placeholder=""
+							onPointerEnterCapture={undefined}
+							onPointerLeaveCapture={undefined}
+						>
+							<CardBody
+								placeholder=""
+								onPointerEnterCapture={undefined}
+								onPointerLeaveCapture={undefined}
+							>
+								<Typography
+									variant="h3"
+									color="blue-gray"
+									className="mb-4"
+									placeholder=""
+									onPointerEnterCapture={undefined}
+									onPointerLeaveCapture={undefined}
+								>
+									The Challenge We&apos;re Addressing
 								</Typography>
-								<Typography className="mb-4">
+								<Typography
+									className="mb-4"
+									placeholder=""
+									onPointerEnterCapture={undefined}
+									onPointerLeaveCapture={undefined}
+								>
 									In our community, thousands of families struggle with food
 									insecurity daily, while simultaneously, significant amounts of
 									food go to waste. This paradox presents both a challenge and
 									an opportunity for sustainable solutions.
 								</Typography>
-								<Typography>
+								<Typography
+									placeholder=""
+									onPointerEnterCapture={undefined}
+									onPointerLeaveCapture={undefined}
+								>
 									Our experience in creating efficient, sustainable systems in
 									the energy sector has given us unique insights into how we can
 									address this critical issue. By applying our expertise in
-									logistics and community engagement, we've developed a
+									logistics and community engagement, we&apos;ve developed a
 									comprehensive approach to food distribution that benefits both
 									those in need and the environment.
 								</Typography>
@@ -106,20 +164,49 @@ export default function FeedTheNeedy() {
 					</section>
 
 					<section>
-						<Typography variant="h3" color="blue-gray" className="mb-4">
+						<Typography
+							variant="h3"
+							color="blue-gray"
+							className="mb-4"
+							placeholder=""
+							onPointerEnterCapture={undefined}
+							onPointerLeaveCapture={undefined}
+						>
 							Our Approach
 						</Typography>
 						<div className="space-y-4">
 							{approachData.map((item, index) => (
-								<Card key={index} className="border border-blue-gray-100">
-									<CardBody>
+								<Card
+									key={index}
+									className="border border-blue-gray-100"
+									placeholder=""
+									onPointerEnterCapture={undefined}
+									onPointerLeaveCapture={undefined}
+								>
+									<CardBody
+										placeholder=""
+										onPointerEnterCapture={undefined}
+										onPointerLeaveCapture={undefined}
+									>
 										<div className="flex items-center mb-2">
 											<div className="mr-4 text-2xl">{item.icon}</div>
-											<Typography variant="h4" color="blue-gray">
+											<Typography
+												variant="h4"
+												color="blue-gray"
+												placeholder=""
+												onPointerEnterCapture={undefined}
+												onPointerLeaveCapture={undefined}
+											>
 												{index + 1}. {item.title}
 											</Typography>
 										</div>
-										<Typography>{item.description}</Typography>
+										<Typography
+											placeholder=""
+											onPointerEnterCapture={undefined}
+											onPointerLeaveCapture={undefined}
+										>
+											{item.description}
+										</Typography>
 									</CardBody>
 								</Card>
 							))}
@@ -130,9 +217,25 @@ export default function FeedTheNeedy() {
 				{/* Sidebar - 1 column */}
 				<div className="space-y-6">
 					{/* Impact Statistics Card */}
-					<Card className="bg-white shadow-lg">
-						<CardBody>
-							<Typography variant="h4" color="blue-gray" className="mb-6">
+					<Card
+						className="bg-white shadow-lg"
+						placeholder=""
+						onPointerEnterCapture={undefined}
+						onPointerLeaveCapture={undefined}
+					>
+						<CardBody
+							placeholder=""
+							onPointerEnterCapture={undefined}
+							onPointerLeaveCapture={undefined}
+						>
+							<Typography
+								variant="h4"
+								color="blue-gray"
+								className="mb-6"
+								placeholder=""
+								onPointerEnterCapture={undefined}
+								onPointerLeaveCapture={undefined}
+							>
 								Our Impact
 							</Typography>
 							<div className="space-y-6">
@@ -140,10 +243,22 @@ export default function FeedTheNeedy() {
 									<div key={index} className="flex items-center">
 										<div className="mr-4 text-2xl">{stat.icon}</div>
 										<div>
-											<Typography variant="h3" color="green">
+											<Typography
+												variant="h3"
+												color="green"
+												placeholder=""
+												onPointerEnterCapture={undefined}
+												onPointerLeaveCapture={undefined}
+											>
 												{stat.value}
 											</Typography>
-											<Typography variant="paragraph" color="gray">
+											<Typography
+												variant="paragraph"
+												color="gray"
+												placeholder=""
+												onPointerEnterCapture={undefined}
+												onPointerLeaveCapture={undefined}
+											>
 												{stat.label}
 											</Typography>
 										</div>
@@ -154,9 +269,25 @@ export default function FeedTheNeedy() {
 					</Card>
 
 					{/* Get Involved Card */}
-					<Card className="bg-green-50">
-						<CardBody>
-							<Typography variant="h4" color="blue-gray" className="mb-6">
+					<Card
+						className="bg-green-50"
+						placeholder=""
+						onPointerEnterCapture={undefined}
+						onPointerLeaveCapture={undefined}
+					>
+						<CardBody
+							placeholder=""
+							onPointerEnterCapture={undefined}
+							onPointerLeaveCapture={undefined}
+						>
+							<Typography
+								variant="h4"
+								color="blue-gray"
+								className="mb-6"
+								placeholder=""
+								onPointerEnterCapture={undefined}
+								onPointerLeaveCapture={undefined}
+							>
 								Get Involved
 							</Typography>
 							<div className="flex flex-col space-y-4">
@@ -164,6 +295,9 @@ export default function FeedTheNeedy() {
 									size="lg"
 									color="green"
 									className="flex items-center justify-center"
+									placeholder=""
+									onPointerEnterCapture={undefined}
+									onPointerLeaveCapture={undefined}
 								>
 									Donate Now
 									<svg
@@ -181,10 +315,24 @@ export default function FeedTheNeedy() {
 										/>
 									</svg>
 								</Button>
-								<Button variant="outlined" size="lg" color="green">
+								<Button
+									variant="outlined"
+									size="lg"
+									color="green"
+									placeholder=""
+									onPointerEnterCapture={undefined}
+									onPointerLeaveCapture={undefined}
+								>
 									Volunteer
 								</Button>
-								<Button variant="text" size="lg" color="green">
+								<Button
+									variant="text"
+									size="lg"
+									color="green"
+									placeholder=""
+									onPointerEnterCapture={undefined}
+									onPointerLeaveCapture={undefined}
+								>
 									Partner With Us
 								</Button>
 							</div>
@@ -192,15 +340,36 @@ export default function FeedTheNeedy() {
 					</Card>
 
 					{/* Social Sharing */}
-					<Card>
-						<CardBody>
-							<Typography variant="h6" color="blue-gray" className="mb-4">
+					<Card
+						placeholder=""
+						onPointerEnterCapture={undefined}
+						onPointerLeaveCapture={undefined}
+					>
+						<CardBody
+							placeholder=""
+							onPointerEnterCapture={undefined}
+							onPointerLeaveCapture={undefined}
+						>
+							<Typography
+								variant="h6"
+								color="blue-gray"
+								className="mb-4"
+								placeholder=""
+								onPointerEnterCapture={undefined}
+								onPointerLeaveCapture={undefined}
+							>
 								Share Our Mission
 							</Typography>
 							<div className="flex justify-center space-x-2">
 								{["Facebook", "Twitter", "LinkedIn"].map((platform) => (
 									<Tooltip key={platform} content={`Share on ${platform}`}>
-										<IconButton variant="outlined" color="green">
+										<IconButton
+											variant="outlined"
+											color="green"
+											placeholder=""
+											onPointerEnterCapture={undefined}
+											onPointerLeaveCapture={undefined}
+										>
 											{platform[0]}
 										</IconButton>
 									</Tooltip>
