@@ -194,7 +194,7 @@ const NavList = memo(() => {
 	const navItems = [
 		{ label: "Home", href: "/" },
 		{ label: "About Us", href: "/about" },
-		{ label: "Contact", href: "/#contact" },
+		{ label: "Sustainability", href: "/sustainability" },
 		{ label: "Newsroom", href: "/newsroom" },
 		{ label: "Careers", href: "/careers" },
 	];
@@ -217,9 +217,9 @@ const NavList = memo(() => {
 					placeholder={undefined}
 					onPointerEnterCapture={undefined}
 					onPointerLeaveCapture={undefined}
-					onClick={(e) =>
-						handleClick(e as React.MouseEvent<HTMLAnchorElement>, item.href)
-					}
+					// onClick={(e) =>
+					// 	handleClick(e as React.MouseEvent<HTMLAnchorElement>, item.href)
+					// }
 				>
 					<ListItem
 						className="flex items-center gap-2 py-2 pr-4"
@@ -291,11 +291,11 @@ export function NavbarFinal() {
 					<div className="flex items-center">
 						<Image src="/logo.png" alt="logo-ct" width={70} height={50} />
 						<div className="grid place-items-center">
-							<h1 className="text-base font-bold">
+							<h1 className="text-sm lg:text-lg font-bold uppercase tracking-wider text-green-700 px-3 mb-2">
 								Binny New Re Energy Limited
 							</h1>
-							<h2 className="text-[10px] font-semibold">
-								Fuel Ethanol, Bio Diesel, Windmills and Solar Energy
+							<h2 className="uppercase font-bold text-[8px] lg:text-[10px] font-normal tracking-wide text-green-600 border-y-2 border-green-600">
+								Fuel Ethanol, Bio Diesel, Windmills & Solar Energy
 							</h2>
 						</div>
 					</div>

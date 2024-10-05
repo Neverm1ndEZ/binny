@@ -36,8 +36,8 @@ const gothamRegular = localFont({
 });
 
 export const metadata: Metadata = {
-	title: "Binny - New Re Energy Limited",
-	description: "Binny - New Re Energy Limited",
+	title: "Binny New Re Energy Limited",
+	description: "Binny New Re Energy Limited",
 };
 
 export default function RootLayout({
