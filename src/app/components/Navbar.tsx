@@ -195,6 +195,8 @@ const NavList = memo(() => {
 		{ label: "Home", href: "/" },
 		{ label: "About Us", href: "/about" },
 		{ label: "Contact", href: "/#contact" },
+		{ label: "Newsroom", href: "/newsroom" },
+		{ label: "Careers", href: "/careers" },
 	];
 
 	return (
@@ -230,7 +232,7 @@ const NavList = memo(() => {
 				</Typography>
 			))}
 			<NavListMenu />
-			{navItems.slice(1, 4).map((item, index) => (
+			{navItems.slice(1).map((item, index) => (
 				<Typography
 					key={index}
 					as="a"
@@ -261,6 +263,8 @@ const NavList = memo(() => {
 
 NavList.displayName = "NavList";
 
+NavList.displayName = "NavList";
+
 export function NavbarFinal() {
 	const [openNav, setOpenNav] = useState(false);
 	const pathname = usePathname();
@@ -277,7 +281,7 @@ export function NavbarFinal() {
 
 	return (
 		<Navbar
-			className="sticky top-0 z-10 w-full max-w-none rounded-none px-0 py-2"
+			className="sticky top-0 z-50 w-full max-w-none rounded-none px-0 py-2"
 			placeholder={undefined}
 			onPointerEnterCapture={undefined}
 			onPointerLeaveCapture={undefined}

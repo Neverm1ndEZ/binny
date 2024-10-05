@@ -31,7 +31,7 @@ const Energy: React.FC = () => {
 				<div className="flex flex-col lg:flex-row justify-between items-start py-12 px-8 gap-y-10">
 					<div className="flex flex-col items-start w-full lg:w-1/2 space-y-6">
 						<h2 className="text-4xl lg:text-5xl font-bold text-green-800 leading-tight">
-							Clean Power for a <br />
+							Clean Energy for a <br />
 							Sustainable Future
 						</h2>
 						<p className="text-base lg:text-lg max-w-md text-green-700">
@@ -40,16 +40,11 @@ const Energy: React.FC = () => {
 						</p>
 					</div>
 					<div className="flex flex-col items-start w-full lg:w-1/2 space-y-10">
-						<p className="text-base lg:text-lg text-green-700">
-							Join <span className="font-bold text-green-800">Binny</span> to
-							lead the future of renewable energy with innovative solutions.
-							Contribute to sustainability and professional growth.
-						</p>
 						<div className="grid grid-cols-2 gap-x-16 gap-y-10 w-full">
-							<Stat value="85%" label="Financial Returns" />
-							<Stat value="95%" label="System Performance" />
-							<Stat value="75%" label="Adoption Rates" />
-							<Stat value="65%" label="Customer Growth" />
+							<Stat value="900 KLPD" label="Bio-Ethanol Portfolio by 2030" />
+							<Stat value="50TPD" label="Green Hydrogen by 2030" />
+							<Stat value="0%" label="Zero Discharge Technology Adopted" />
+							<Stat value="120 MW" label="Hybrid-Wind Solar Planned for 2027" />
 						</div>
 						<Link href={`#contact`}>
 							<button className="group relative overflow-hidden rounded-full bg-green-600 px-8 py-4 transition-all duration-300 hover:bg-green-700">

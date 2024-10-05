@@ -77,7 +77,7 @@ const LongCard: React.FC = () => {
 
 	const cardItems: CardItemProps[] = [
 		{
-			title: "Ethanol Power Plant",
+			title: "Ethanol Bio-Fuel Plant",
 			imageSrc: "/eth.jpg",
 			imagePosition: "right",
 			href: "/energy/ethanol",

@@ -1,4 +1,4 @@
-import React from "react";
+import { ArrowRightIcon } from "@heroicons/react/24/outline";
 import {
 	Button,
 	Dialog,
@@ -6,6 +6,7 @@ import {
 	DialogHeader,
 	Typography,
 } from "@material-tailwind/react";
+import React from "react";
 
 interface ModalProps {
 	buttonText: string;
@@ -57,12 +58,12 @@ export function Modal({ buttonText, heading, message }: ModalProps) {
 				onClick={handleOpen}
 				color="green"
 				variant="text"
-				className="p-0 hover:p-4"
+				className="p-0 hover:p-4 flex items-center gap-2"
 				placeholder=""
 				onPointerEnterCapture=""
 				onPointerLeaveCapture=""
 			>
-				{buttonText}
+				{buttonText} <ArrowRightIcon strokeWidth={2} className="w-3 h-3" />
 			</Button>
 			<Dialog
 				open={open}

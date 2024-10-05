@@ -12,6 +12,8 @@ const menuItems: MenuItem[] = [
 	{ label: "Home", href: "/" },
 	{ label: "About Us", href: "/about" },
 	{ label: "Contact", href: "#contact" },
+	{ label: "Newsroom", href: "/newsroom" },
+	{ label: "Careers", href: "/careers" },
 ];
 
 const lowerMenuItems: MenuItem[] = [
