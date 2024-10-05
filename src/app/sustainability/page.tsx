@@ -27,7 +27,7 @@ export default function page() {
 		<div className="p-4">
 			<Tabs value="feed-the-needy">
 				<TabsHeader
-					className="flex justify-center items-center bg-gray-200 p-2 w-full md:w-1/2 lg:w-1/2 mx-auto my-5"
+					className="flex justify-center items-center bg-gray-200 p-2 w-full md:w-1/2 lg:w-1/3 mx-auto my-5"
 					indicatorProps={{
 						className: `absolute inset-0 z-10 h-full w bg-green-500 rounded-md shadow px-8 align-middle`,
 					}}

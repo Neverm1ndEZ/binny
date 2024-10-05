@@ -291,10 +291,10 @@ export function NavbarFinal() {
 					<div className="flex items-center">
 						<Image src="/logo.png" alt="logo-ct" width={70} height={50} />
 						<div className="grid place-items-center">
-							<h1 className="text-sm lg:text-lg font-bold uppercase tracking-wider text-green-700 px-3 mb-2">
+							<h1 className="text-sm lg:text-lg font-bold uppercase tracking-wider text-green-700 px-3 mb-1">
 								Binny New Re Energy Limited
 							</h1>
-							<h2 className="uppercase font-bold text-[8px] lg:text-[10px] font-normal tracking-wide text-green-600 border-y-2 border-green-600">
+							<h2 className="uppercase font-bold text-[8px] lg:text-[10px] font-normal tracking-wide text-green-600">
 								Fuel Ethanol, Bio Diesel, Windmills & Solar Energy
 							</h2>
 						</div>
