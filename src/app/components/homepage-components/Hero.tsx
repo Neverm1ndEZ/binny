@@ -19,7 +19,7 @@ export default function Hero() {
 				autoplayDelay={5700}
 				className="w-full h-full"
 				navigation={({ setActiveIndex, activeIndex }) => (
-					<div className="absolute bottom-4 left-2/4 z-50 flex -translate-x-2/4 gap-2">
+					<div className="absolute bottom-4 left-2/4 z-30 flex -translate-x-2/4 gap-2">
 						{images.map((_, i) => (
 							<span
 								key={i}
