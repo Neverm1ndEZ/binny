@@ -4,24 +4,6 @@ import "./globals.css";
 import { MaterialProvider } from "./providers";
 import { NavbarFinal } from "./components/Navbar";
 import Footer from "./components/Footer";
-// import { Montserrat } from "next/font/google";
-
-// const monst = Montserrat({
-// 	subsets: ["latin"],
-// 	display: "swap",
-// });
-
-// const geistSans = localFont({
-// 	src: "./fonts/GeistVF.woff",
-// 	variable: "--font-geist-sans",
-// 	weight: "100 900",
-// });
-
-// const geistMono = localFont({
-// 	src: "./fonts/GeistMonoVF.woff",
-// 	variable: "--font-geist-mono",
-// 	weight: "100 900",
-// });
 
 const gothamBook = localFont({
 	src: "./fonts/GothamPro.woff",
@@ -49,6 +31,7 @@ export default function RootLayout({
 		<html lang="en">
 			<head>
 				<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+				<link rel="icon" href="/favicon.ico" />
 			</head>
 			<body
 				className={`${gothamBook.variable} ${gothamRegular.variable} antialiased font-sans`}

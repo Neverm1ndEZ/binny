@@ -1,7 +1,8 @@
 "use client";
-import React from "react";
+import { ArrowRightIcon } from "@heroicons/react/24/outline";
+import { Button } from "@material-tailwind/react";
 import Image from "next/image";
-import { Modal } from "../Modal";
+import React from "react";
 
 interface SustainabilityCardProps {
 	imageSrc: string;
@@ -27,7 +28,16 @@ const SustainabilityCard: React.FC<SustainabilityCardProps> = ({
 		<div className="p-6 w-full">
 			<h3 className="text-2xl font-bold text-green-700 mb-3">{title}</h3>
 			<p className="text-gray-600 mb-4">{description}</p>
-			<Modal buttonText="Read More" />
+			<Button
+				color="green"
+				variant="text"
+				className="p-0 hover:p-4 flex items-center gap-2"
+				placeholder=""
+				onPointerEnterCapture=""
+				onPointerLeaveCapture=""
+			>
+				Read More <ArrowRightIcon strokeWidth={2} className="w-3 h-3" />
+			</Button>
 		</div>
 	</div>
 );
